@@ -7,13 +7,11 @@ from model_testing import ModelEvaluator
 # List of CSV files to process
 csv_files = {
     "function": "GaspipelineDatasets/NewGasFilteredFunctionMinMax.csv",
-    "command": "GaspipelineDatasets/NewGasFilteredCommandMinMax.csv",
-    "all": "GaspipelineDatasets/NewGasFilteredAllMinMax.csv",
-    "response": "GaspipelineDatasets/NewGasFilteredResponseNNNoOHEMulti.csv"
+    
 }
 
 model_dir = 'results/models/'
-ranking_methods = ["SP", "WFI-RF", "WFI-XGB"]  # Added WFI-RF and WFI-XGB
+ranking_methods = ["SP"]  # Added WFI-RF and WFI-XGB
 use_std_dev = use_abs_diff = use_skewness = use_kurtosis = True
 
 for dataset_name, input_file in csv_files.items():

@@ -29,7 +29,7 @@ for dataset_name, input_file in csv_files.items():
         total_features = len(ranked_features)
         print(f"Processing dataset: {dataset_name} with {total_features} features using {ranking_method}.")
         
-        for model_type in ["RF", "XGB"]:
+        for model_type in ["RF"]:
             for feature_selection_method in ["RFE", "SPFS", "None"]:
                 # Step 2: Select Features
                 selector = FeatureSelector(dataset_name, ranking_file, input_file)

@@ -8,9 +8,10 @@ from sklearn.metrics import f1_score
 import pickle
 
 class FeatureSelector:
-    def __init__(self, ranking_file, input_file):
+    def __init__(self, dataset_name, ranking_file, input_file):
         self.ranking_file = ranking_file
         self.input_file = input_file
+        self.dataset_name = dataset_name
         self.df = pd.read_csv(input_file)
         self.selected_features = []
         self.metrics_dir = "results/metrics/"
@@ -33,7 +34,7 @@ class FeatureSelector:
             self.perform_spfs(model_type)
         else:
             print("Skipped Feature Selection. Using all features.")
-            self.preform_baseline(model_type)
+            self.perform_baseline(model_type)
 
 
     def perform_rfe(self, model_type):
@@ -46,7 +47,7 @@ class FeatureSelector:
         X = self.df.drop(columns=[target_column])  # Use ranked feature order
 
         # Select Model Type
-        if model_type == 'XGBoost':
+        if model_type == 'XGB':
             y = y.astype('category').cat.codes  
             model = xgb.XGBClassifier(seed=42)
         else:
@@ -111,7 +112,7 @@ class FeatureSelector:
             X_selected = X[self.selected_features]
             X_train, X_test, y_train, y_test = train_test_split(X_selected, y, test_size=0.2, random_state=42)
 
-            if model_type == 'XGBoost':
+            if model_type == 'XGB':
                 y_train = y_train.astype('category').cat.codes
                 y_test = y_test.astype('category').cat.codes
                 model = xgb.XGBClassifier(seed=42)
@@ -132,7 +133,7 @@ class FeatureSelector:
         self.save_final_model(model, model_type, "SPFS")
         print(f"Final selected features: {self.selected_features}")
     
-    def preform_baseline(self, model_type):
+    def perform_baseline(self, model_type):
 
         # Use all features except 'Label'
         self.selected_features = self.df.columns.tolist()
@@ -143,7 +144,7 @@ class FeatureSelector:
         y = self.df['Label']
 
         # Encode y if using XGBoost
-        if model_type.lower() == "xgboost":
+        if model_type.lower() == "xgb":
             y = y.astype('category').cat.codes  # Convert labels to numerical codes
             model = xgb.XGBClassifier(seed=42)
         else:
@@ -156,7 +157,7 @@ class FeatureSelector:
         model.fit(X_train, y_train)
 
         # Save the trained model
-        model_path = f"results/models/{model_type}_Baseline.pkl"
+        model_path = f"results/models/{self.dataset_name}_{model_type}_None.pkl"
         os.makedirs(os.path.dirname(model_path), exist_ok=True)
         
         with open(model_path, 'wb') as model_file:
@@ -170,7 +171,7 @@ class FeatureSelector:
         return {'F1 Score': f1}
 
     def save_final_model(self, model, model_type, method):
-        model_filename = f"{model_type}_{method}.pkl"
+        model_filename = f"{self.dataset_name}_{model_type}_{method}.pkl"
         model_path = os.path.join(self.model_dir, model_filename)
 
         with open(model_path, 'wb') as f:
@@ -186,7 +187,7 @@ class FeatureSelector:
         X = self.df[selected_features]  # Use selected features!
     
         # Select model type
-        if model_type.lower() == "xgboost":
+        if model_type.lower() == "xgb":
             y = y.astype('category').cat.codes
             model = xgb.XGBClassifier(seed=42)
         else:

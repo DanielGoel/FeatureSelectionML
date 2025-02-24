@@ -1,0 +1,16 @@
+Name,index,Random Forest Feature Importance
+function,1,0.170343393
+crc_rate,14,0.147660137
+length,2,0.135827494
+cycle_time,7,0.094819041
+reset_rate,5,0.093910853
+setpoint,3,0.088681543
+gain,4,0.074428897
+deadband,6,0.07117065
+rate,8,0.047492894
+pump,11,0.027475738
+system_mode,9,0.025343796
+control_scheme,10,0.008637793
+solenoid,12,0.006636812
+address,0,0.006363212
+pressure_measurement,13,0.001207744

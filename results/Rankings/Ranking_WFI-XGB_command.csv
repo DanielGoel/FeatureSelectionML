@@ -1,0 +1,10 @@
+Name,index,XGBoost Feature Importance
+rate,5,0.632472
+pump,8,0.10033454
+cycle_time,4,0.056402348
+gain,1,0.053013075
+system_mode,6,0.03845159
+reset_rate,2,0.035818584
+setpoint,0,0.032774176
+deadband,3,0.026163341
+control_scheme,7,0.024570404

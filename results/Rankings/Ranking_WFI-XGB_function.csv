@@ -1,0 +1,16 @@
+Name,index,XGBoost Feature Importance
+length,2,0.34977877
+function,1,0.1834725
+crc_rate,14,0.17529489
+rate,8,0.15404472
+pump,11,0.032862175
+gain,4,0.021015316
+cycle_time,7,0.018801956
+system_mode,9,0.013917462
+reset_rate,5,0.011270906
+setpoint,3,0.011252478
+deadband,6,0.00900604
+control_scheme,10,0.008318005
+solenoid,12,0.006199963
+pressure_measurement,13,0.0047648847
+address,0,0.0

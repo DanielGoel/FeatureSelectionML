@@ -29,12 +29,12 @@ class DataAnalysisRanker:
         metrics = {}
         ranks = {}
 
-        if rank_method == 'randomforest':
+        if rank_method == 'WFI-RF':
             feature_importances_df = self.wfi_RandomForest()
             feature_importances_df = feature_importances_df.set_index('Name')
             self.df = self.df[feature_importances_df.index]
         
-        elif rank_method == 'xgboost':
+        elif rank_method == 'WFI-XGB':
             feature_importances_df = self.wfi_XGBoost()
             feature_importances_df = feature_importances_df.set_index('Name')
             self.df = self.df[feature_importances_df.index]

@@ -50,7 +50,7 @@ def plot_label_counts(csv_file, save_path):
     plt.close()
 
 # Replace 'yourfile.csv' with your actual CSV file path
-csv_file_path = 'gaspipelinedatasets/NewGasFilteredFunctionMinMax.csv'
+csv_file_path = 'gaspipelinedatasets/NewGasFilteredResponseNNNoOHEMulti.csv'
 
 # Directory where you want to save the plot
 save_directory = 'results/figures'

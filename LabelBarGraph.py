@@ -24,7 +24,7 @@ def plot_label_counts(csv_file, save_path):
 
     # Create the bar chart
     plt.figure(figsize=(10, 6))
-    category_counts.plot(kind='bar', color='blue')
+    category_counts.plot(kind='bar', color='dodgerblue')
 
     # Add the count on top of each bar
     for i, count in enumerate(category_counts):

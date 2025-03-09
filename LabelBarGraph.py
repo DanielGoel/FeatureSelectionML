@@ -3,22 +3,24 @@ import matplotlib.pyplot as plt
 import os
 
 # Function to count occurrences of each label in the CSV and plot the bar graph
-def plot_label_counts(csv_file, save_path):
+def plot_label_counts(dataset_name, 
+                    csv_file, save_path):
     # Load the CSV file into a pandas DataFrame
     df = pd.read_csv(csv_file)
 
     # Map the labels to the corresponding categories
-    label_mapping = {
-        0: 'Normal',
-        3: 'PID Gain', 4: 'PID Gain',
-        5: 'PID Reset Rate', 6: 'PID Reset Rate',
-        7: 'PID Rate',
-        1: 'Setpoint', 2: 'Setpoint'
-    }
+#    label_mapping = {
+#        0: 'Normal',
+#        3: 'PID Gain', 4: 'PID Gain',
+#        5: 'PID Reset Rate', 6: 'PID Reset Rate',
+#        7: 'PID Rate',
+#        1: 'Setpoint', 2: 'Setpoint'
+#    }
 
     # Create a new column 'category' based on the label column
-    df['category'] = df['Label'].map(label_mapping)
+#    df['category'] = df['Label'].map(label_mapping)
 
+    df['category'] = df['Label']
     # Count the occurrences of each category
     category_counts = df['category'].value_counts().sort_index()
 
@@ -42,17 +44,19 @@ def plot_label_counts(csv_file, save_path):
     os.makedirs(save_path, exist_ok=True)
 
     # Save the plot to the specified directory
-    save_file = os.path.join(save_path, 'label_counts_plot.png')
+    save_file = os.path.join(save_path, f'label_counts_plot_{os.path.basename(dataset_name)}.png')
     plt.savefig(save_file)
     print(f"Plot saved to {save_file}")
 
     # Close the plot to free up memory
     plt.close()
 
-# Replace 'yourfile.csv' with your actual CSV file path
-csv_file_path = 'gaspipelinedatasets/NewGasFilteredFunctionMinMax.csv'
-
-# Directory where you want to save the plot
+csv_files = {
+    "function": "GaspipelineDatasets/NewGasFilteredFunctionMinMax_Remapped.csv",
+    "command": "GaspipelineDatasets/NewGasFilteredCommandMinMax_Remapped.csv",
+    "all": "GaspipelineDatasets/NewGasFilteredAllMinMax.csv",
+    "response": "GaspipelineDatasets/NewGasFilteredResponseNNNoOHEMulti.csv"
+}
 save_directory = 'results/figures'
-
-plot_label_counts(csv_file_path, save_directory)
+for dataset_name, csv_file in csv_files.items():
+    plot_label_counts(dataset_name, csv_file, save_directory)

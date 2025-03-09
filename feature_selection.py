@@ -29,12 +29,13 @@ class FeatureSelector:
 
     def perform_feature_selection(self, model_type, method):
         if method == "RFE":
-            self.perform_rfe(model_type)
+            return self.perform_rfe(model_type)  
         elif method == "SPFS":
-            self.perform_spfs(model_type)
+            return self.perform_spfs(model_type) 
         else:
-            print("Skipped Feature Selection. Using all features.")
-            self.perform_baseline(model_type)
+            print("⚠️ Skipped Feature Selection. Using all features.")
+            return self.perform_baseline(model_type) 
+
 
 
     def perform_rfe(self, model_type):
@@ -91,7 +92,7 @@ class FeatureSelector:
         self.save_final_model(model, model_type, "RFE")
         print(f"Final selected features: {self.selected_features}")
         print(f"Final F1 Score: {best_f1_score:.4f}")
-
+        return model, self.selected_features 
 
     def perform_spfs(self, model_type):
         self.selected_features = []
@@ -132,6 +133,7 @@ class FeatureSelector:
         # Save final SPFS model
         self.save_final_model(model, model_type, "SPFS")
         print(f"Final selected features: {self.selected_features}")
+        return model, self.selected_features
     
     def perform_baseline(self, model_type):
 
@@ -164,7 +166,7 @@ class FeatureSelector:
             pickle.dump(model, model_file)
 
         print(f"✅ Baseline Model ({model_type}) saved to {model_path}")
-        
+        return model, self.selected_features
 
     def get_f1_score(self, y_true, y_pred):
         f1 = f1_score(y_true, y_pred, average='weighted')
@@ -205,4 +207,4 @@ class FeatureSelector:
             pickle.dump(model, f)
     
         print(f"✅ Model saved to {model_path}")
-
+        return model

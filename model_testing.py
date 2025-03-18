@@ -2,15 +2,15 @@ import pandas as pd
 import os
 import pickle
 import time
-from sklearn.model_selection import train_test_split, KFold
+from sklearn.model_selection import train_test_split, StratifiedKFold
 from sklearn.metrics import f1_score, precision_score, recall_score, accuracy_score, confusion_matrix
 import xgboost as xgb
 from sklearn.ensemble import RandomForestClassifier
 
 class ModelEvaluator:
-    def __init__(self, og_file, input_file, average_type, selected_features, model_type, 
+    def __init__(self, original_file, input_file, average_type, selected_features, model_type, 
                  feature_selection_method, model_path, rank_method, metrics_log_file):
-        self.og_file = og_file
+        self.original_file = original_file
         self.rank_method = rank_method
         self.input_file = input_file
         self.feature_selection_method = feature_selection_method
@@ -54,14 +54,14 @@ class ModelEvaluator:
         y = self.df[self.target_column]
 
         # Encode labels for XGBoost
-        if "xgboost" in self.model_type.lower():
+        if "XGB" in self.model_type:
             y = y.astype('category').cat.codes
 
         # **Step 1: Split dataset into 80% training, 20% final test**
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
         # **Step 2: Apply K-Fold CV on the 80% training set**
-        kf = KFold(n_splits=10, shuffle=True, random_state=42)
+        kf = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
         best_f1_score = 0
         best_model = None
 
@@ -71,10 +71,12 @@ class ModelEvaluator:
             y_train_fold, y_val_fold = y_train.iloc[train_index], y_train.iloc[val_index]
 
             # Train either XGBoost or Random Forest
-            if "xgboost" in self.model_type.lower():
+            if "XGB" in self.model_type:
                 model = xgb.XGBClassifier(seed=42)
-            else:
+            elif "RF" in self.model_type:
                 model = RandomForestClassifier(random_state=42)
+            else:
+                raise ValueError("Invalid model type. Allowed types: 'XGB' or 'RF'.")
 
             model.fit(X_train_fold, y_train_fold)
             y_pred_fold = model.predict(X_val_fold)
@@ -100,7 +102,7 @@ class ModelEvaluator:
 
         # **Step 4: Log Results**
         log_entry = pd.DataFrame({
-            'Input File': [os.path.basename(self.og_file)],
+            'Input File': [os.path.basename(self.original_file)],
             'Rank Method': [self.rank_method],
             'Feature Selection': [self.feature_selection_method],
             'Model Type': [self.model_type],

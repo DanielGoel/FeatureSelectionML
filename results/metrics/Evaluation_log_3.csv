@@ -1,0 +1,709 @@
+Input File,Rank Method,Feature Selection,Model Type,Average Type,Number of Features,Removed Features,Best K-Fold F1 Score,Accuracy,Precision,Recall,F1 Score,FPR,FNR,Ranking Time,Feature Selection Time,Evaluation Time,Total Time
+function,SP,RFE,RF,micro,13,"crc_rate, pressure_measurement",0.9897,0.9871,0.9871,0.9871,0.9871,0.0015,0.1135,0.2713,140.3831,67.1213,207.7756
+function,WFI-XGB,RFE,RF,micro,12,"function, pressure_measurement, address",0.9899,0.9871,0.9871,0.9871,0.9871,0.0015,0.1148,3.5413,118.1741,67.2535,188.969
+function,SP,RFE,RF,weighted,13,"crc_rate, pressure_measurement",0.9894,0.9871,0.9869,0.9871,0.9869,0.0015,0.1135,0.2713,140.3831,66.5244,207.1788
+function,WFI-XGB,RFE,RF,weighted,12,"function, pressure_measurement, address",0.9896,0.9871,0.9868,0.9871,0.9869,0.0015,0.1148,3.5413,118.1741,68.0337,189.7491
+function,SP,None,RF,micro,15,,0.9899,0.987,0.987,0.987,0.987,0.0015,0.1161,0.2713,8.3521,72.7778,81.4012
+function,WFI-RF,None,RF,micro,15,,0.9899,0.987,0.987,0.987,0.987,0.0015,0.1161,7.6107,8.1132,73.407,89.1308
+function,WFI-XGB,None,RF,micro,15,,0.9899,0.987,0.987,0.987,0.987,0.0015,0.1161,3.5413,8.2624,74.1028,85.9065
+function,WFI-RF,None,RF,weighted,15,,0.9895,0.987,0.9867,0.987,0.9867,0.0015,0.1161,7.6107,8.1132,74.2324,89.9563
+function,SP,None,RF,weighted,15,,0.9895,0.987,0.9867,0.987,0.9867,0.0015,0.1161,0.2713,8.3521,74.6111,83.2345
+function,WFI-XGB,None,RF,weighted,15,,0.9895,0.987,0.9867,0.987,0.9867,0.0015,0.1161,3.5413,8.2624,72.9117,84.7154
+function,WFI-RF,rem_1,RF,micro,14,pressure_measurement,0.9898,0.9869,0.9869,0.9869,0.9869,0.0015,0.1135,7.6107,8.1132,62.7743,78.4982
+function,WFI-XGB,rem_1,RF,micro,14,address,0.9898,0.9869,0.9869,0.9869,0.9869,0.0015,0.1173,3.5413,8.2624,72.8105,84.6142
+function,WFI-RF,rem_1,RF,weighted,14,pressure_measurement,0.9895,0.9869,0.9867,0.9869,0.9867,0.0015,0.1135,7.6107,8.1132,61.37,77.0938
+function,WFI-XGB,rem_1,RF,weighted,14,address,0.9895,0.9869,0.9866,0.9869,0.9867,0.0015,0.1173,3.5413,8.2624,77.1574,88.9611
+function,WFI-XGB,SPFS,RF,micro,15,,0.9897,0.9869,0.9869,0.9869,0.9869,0.0015,0.1161,3.5413,70.686,74.4607,148.6881
+function,WFI-XGB,SPFS,RF,weighted,15,,0.9893,0.9869,0.9866,0.9869,0.9866,0.0015,0.1161,3.5413,70.686,74.0131,148.2404
+function,WFI-XGB,rem_2,RF,micro,13,"pressure_measurement, address",0.9897,0.9868,0.9868,0.9868,0.9868,0.0015,0.1148,3.5413,8.2624,65.8471,77.6508
+function,WFI-XGB,rem_2,RF,weighted,13,"pressure_measurement, address",0.9894,0.9868,0.9865,0.9868,0.9865,0.0015,0.1148,3.5413,8.2624,64.5216,76.3253
+function,WFI-RF,rem_2,RF,micro,13,"pressure_measurement, address",0.9898,0.9867,0.9867,0.9867,0.9867,0.0015,0.1161,7.6107,8.1132,64.9786,80.7024
+function,WFI-RF,RFE,RF,micro,12,"crc_rate, pressure_measurement, address",0.9894,0.9867,0.9867,0.9867,0.9867,0.0015,0.1148,7.6107,119.0163,66.4172,193.0441
+function,WFI-RF,RFE,RF,weighted,12,"crc_rate, pressure_measurement, address",0.9891,0.9867,0.9864,0.9867,0.9865,0.0015,0.1148,7.6107,119.0163,65.5348,192.1618
+function,WFI-RF,rem_2,RF,weighted,13,"pressure_measurement, address",0.9895,0.9867,0.9865,0.9867,0.9865,0.0015,0.1161,7.6107,8.1132,65.1027,80.8266
+function,WFI-RF,SPFS,RF,micro,15,,0.9899,0.9866,0.9866,0.9866,0.9866,0.0015,0.1199,7.6107,89.7379,74.1535,171.502
+function,SP,SPFS,RF,weighted,15,,0.9893,0.9866,0.9863,0.9866,0.9863,0.0015,0.1199,0.2713,139.4981,72.7372,212.5066
+function,SP,SPFS,RF,micro,15,,0.9896,0.9866,0.9866,0.9866,0.9866,0.0015,0.1199,0.2713,139.4981,75.1577,214.9271
+function,SP,rem_1,RF,micro,14,control_scheme,0.989,0.9866,0.9866,0.9866,0.9866,0.0015,0.1224,0.2713,8.3521,76.689,85.3124
+function,WFI-RF,SPFS,RF,weighted,15,,0.9896,0.9866,0.9863,0.9866,0.9863,0.0015,0.1199,7.6107,89.7379,72.2276,169.5761
+function,SP,rem_1,RF,weighted,14,control_scheme,0.9885,0.9866,0.9862,0.9866,0.9862,0.0015,0.1224,0.2713,8.3521,75.18,83.8034
+function,WFI-RF,rem_3,RF,micro,12,"solenoid, pressure_measurement, address",0.9873,0.9855,0.9855,0.9855,0.9855,0.0026,0.1327,7.6107,8.1132,64.5516,80.2754
+function,WFI-RF,rem_3,RF,weighted,12,"solenoid, pressure_measurement, address",0.9871,0.9855,0.9852,0.9855,0.9852,0.0026,0.1327,7.6107,8.1132,64.6412,80.3651
+function,WFI-XGB,rem_3,RF,micro,12,"solenoid, pressure_measurement, address",0.9873,0.9854,0.9854,0.9854,0.9854,0.0026,0.1352,3.5413,8.2624,64.8469,76.6506
+function,WFI-XGB,rem_3,RF,weighted,12,"solenoid, pressure_measurement, address",0.9871,0.9854,0.985,0.9854,0.9851,0.0026,0.1352,3.5413,8.2624,67.0715,78.8752
+function,SP,None,XGB,micro,15,,0.9873,0.9853,0.9853,0.9853,0.9853,0.0006,0.1276,0.2713,2.6469,21.8385,24.7566
+function,WFI-RF,None,XGB,micro,15,,0.9873,0.9853,0.9853,0.9853,0.9853,0.0006,0.1276,7.6107,2.7278,23.5335,33.8719
+function,WFI-XGB,None,XGB,micro,15,,0.9873,0.9853,0.9853,0.9853,0.9853,0.0006,0.1276,3.5413,2.8595,24.2904,30.6913
+function,WFI-RF,None,XGB,weighted,15,,0.987,0.9853,0.9854,0.9853,0.9851,0.0006,0.1276,7.6107,2.7278,23.1608,33.4992
+function,SP,None,XGB,weighted,15,,0.987,0.9853,0.9854,0.9853,0.9851,0.0006,0.1276,0.2713,2.6469,21.317,24.2352
+function,WFI-XGB,None,XGB,weighted,15,,0.987,0.9853,0.9854,0.9853,0.9851,0.0006,0.1276,3.5413,2.8595,21.7202,28.1211
+function,SP,SPFS,XGB,micro,15,,0.9863,0.9852,0.9852,0.9852,0.9852,0.0007,0.1276,0.2713,30.7238,21.6013,52.5964
+function,WFI-RF,SPFS,XGB,micro,15,,0.9863,0.9852,0.9852,0.9852,0.9852,0.0007,0.1276,7.6107,30.9727,23.8124,62.3957
+function,WFI-RF,SPFS,XGB,weighted,15,,0.986,0.9852,0.9852,0.9852,0.985,0.0007,0.1276,7.6107,30.9727,23.191,61.7743
+function,SP,SPFS,XGB,weighted,15,,0.986,0.9852,0.9852,0.9852,0.985,0.0007,0.1276,0.2713,30.7238,23.6398,54.6349
+function,WFI-XGB,RFE,XGB,weighted,14,address,0.986,0.9852,0.9852,0.9852,0.985,0.0007,0.1276,3.5413,46.4898,25.1868,75.2179
+function,WFI-XGB,SPFS,XGB,weighted,15,,0.986,0.9852,0.9852,0.9852,0.985,0.0007,0.1276,3.5413,34.7657,23.802,62.109
+function,WFI-XGB,rem_1,XGB,weighted,14,address,0.986,0.9852,0.9852,0.9852,0.985,0.0007,0.1276,3.5413,2.8595,23.5095,29.9103
+function,WFI-XGB,rem_4,RF,micro,11,"solenoid, address, pressure_measurement, control_scheme",0.9865,0.9851,0.9851,0.9851,0.9851,0.0029,0.1339,3.5413,8.2624,68.3123,80.116
+function,WFI-XGB,rem_4,RF,weighted,11,"solenoid, address, pressure_measurement, control_scheme",0.9862,0.9851,0.9847,0.9851,0.9848,0.0029,0.1339,3.5413,8.2624,66.0619,77.8655
+function,WFI-XGB,rem_1,XGB,micro,14,address,0.9863,0.985,0.985,0.985,0.985,0.0006,0.162,3.5413,2.8595,21.5152,27.916
+function,WFI-RF,rem_4,RF,weighted,11,"solenoid, address, pressure_measurement, control_scheme",0.9862,0.985,0.9846,0.985,0.9847,0.0029,0.1314,7.6107,8.1132,67.154,82.8778
+function,WFI-XGB,SPFS,XGB,micro,15,,0.9863,0.985,0.985,0.985,0.985,0.0006,0.162,3.5413,34.7657,25.162,63.469
+function,WFI-XGB,RFE,XGB,micro,14,address,0.9863,0.985,0.985,0.985,0.985,0.0006,0.162,3.5413,46.4898,26.5656,76.5967
+function,WFI-RF,rem_4,RF,micro,11,"solenoid, address, pressure_measurement, control_scheme",0.9865,0.985,0.985,0.985,0.985,0.0029,0.1314,7.6107,8.1132,67.4924,83.2163
+function,SP,rem_2,RF,micro,13,"solenoid, control_scheme",0.9861,0.9849,0.9849,0.9849,0.9849,0.0029,0.139,0.2713,8.3521,81.3641,89.9875
+function,SP,rem_2,RF,weighted,13,"solenoid, control_scheme",0.9858,0.9849,0.9844,0.9849,0.9845,0.0029,0.139,0.2713,8.3521,79.4501,88.0735
+function,SP,rem_1,XGB,micro,14,control_scheme,0.986,0.9847,0.9847,0.9847,0.9847,0.0007,0.1492,0.2713,2.6469,21.5695,24.4876
+function,SP,rem_1,XGB,weighted,14,control_scheme,0.9857,0.9847,0.9847,0.9847,0.9844,0.0007,0.1492,0.2713,2.6469,20.7832,23.7013
+function,SP,RFE,XGB,micro,13,"function, address",0.9864,0.9846,0.9846,0.9846,0.9846,0.0007,0.1543,0.2713,36.7065,21.5005,58.4783
+function,SP,RFE,XGB,weighted,13,"function, address",0.986,0.9846,0.9846,0.9846,0.9843,0.0007,0.1543,0.2713,36.7065,20.4008,57.3785
+function,SP,rem_3,RF,micro,12,"solenoid, length, control_scheme",0.9865,0.9846,0.9846,0.9846,0.9846,0.0029,0.1352,0.2713,8.3521,81.7153,90.3387
+function,SP,rem_3,RF,weighted,12,"solenoid, length, control_scheme",0.9862,0.9846,0.9841,0.9846,0.9842,0.0029,0.1352,0.2713,8.3521,85.8165,94.4399
+function,WFI-RF,RFE,XGB,micro,13,"length, address",0.9863,0.9844,0.9844,0.9844,0.9844,0.0006,0.1505,7.6107,25.9192,15.9908,49.5207
+function,WFI-RF,RFE,XGB,weighted,13,"length, address",0.986,0.9844,0.9843,0.9844,0.984,0.0006,0.1505,7.6107,25.9192,28.1839,61.7137
+function,SP,rem_3,XGB,micro,12,"solenoid, length, control_scheme",0.9853,0.9834,0.9834,0.9834,0.9834,0.001,0.1696,0.2713,2.6469,21.11,24.0282
+function,WFI-XGB,rem_2,XGB,micro,13,"pressure_measurement, address",0.9846,0.9834,0.9834,0.9834,0.9834,0.0006,0.1671,3.5413,2.8595,22.6737,29.0746
+function,WFI-RF,rem_1,XGB,micro,14,pressure_measurement,0.9846,0.9834,0.9834,0.9834,0.9834,0.0006,0.1671,7.6107,2.7278,22.7929,33.1313
+function,WFI-RF,rem_1,XGB,weighted,14,pressure_measurement,0.9841,0.9834,0.9833,0.9834,0.9829,0.0006,0.1671,7.6107,2.7278,22.5606,32.899
+function,WFI-RF,rem_2,XGB,weighted,13,"pressure_measurement, address",0.9841,0.9834,0.9833,0.9834,0.9829,0.0006,0.1671,7.6107,2.7278,23.0451,33.3835
+function,WFI-XGB,rem_2,XGB,weighted,13,"pressure_measurement, address",0.9841,0.9834,0.9833,0.9834,0.9829,0.0006,0.1671,3.5413,2.8595,21.1728,27.5736
+function,WFI-RF,rem_2,XGB,micro,13,"pressure_measurement, address",0.9846,0.9834,0.9834,0.9834,0.9834,0.0006,0.1671,7.6107,2.7278,24.1859,34.5243
+function,SP,rem_3,XGB,weighted,12,"solenoid, length, control_scheme",0.9848,0.9834,0.9833,0.9834,0.983,0.001,0.1696,0.2713,2.6469,21.6067,24.5248
+function,SP,rem_2,XGB,micro,13,"solenoid, control_scheme",0.9841,0.9831,0.9831,0.9831,0.9831,0.0009,0.1824,0.2713,2.6469,20.9888,23.907
+function,SP,rem_2,XGB,weighted,13,"solenoid, control_scheme",0.9836,0.9831,0.9831,0.9831,0.9827,0.0009,0.1824,0.2713,2.6469,20.9151,23.8332
+function,SP,rem_4,RF,micro,11,"pump, solenoid, length, control_scheme",0.9846,0.9823,0.9823,0.9823,0.9823,0.004,0.1862,0.2713,8.3521,86.6099,95.2333
+function,SP,rem_5,RF,micro,10,"pump, control_scheme, solenoid, crc_rate, length",0.9846,0.9823,0.9823,0.9823,0.9823,0.004,0.1849,0.2713,8.3521,96.7145,105.3379
+function,SP,rem_5,RF,weighted,10,"pump, control_scheme, solenoid, crc_rate, length",0.9842,0.9823,0.9817,0.9823,0.9818,0.004,0.1849,0.2713,8.3521,93.1505,101.7739
+function,SP,rem_4,RF,weighted,11,"pump, solenoid, length, control_scheme",0.9841,0.9823,0.9817,0.9823,0.9818,0.004,0.1862,0.2713,8.3521,87.7218,96.3452
+function,WFI-RF,rem_5,RF,micro,10,"system_mode, control_scheme, solenoid, pressure_measurement, address",0.9835,0.9816,0.9816,0.9816,0.9816,0.0035,0.2117,7.6107,8.1132,67.9738,83.6976
+function,WFI-RF,rem_5,RF,weighted,10,"system_mode, control_scheme, solenoid, pressure_measurement, address",0.9828,0.9816,0.9809,0.9816,0.9811,0.0035,0.2117,7.6107,8.1132,69.4951,85.219
+function,WFI-XGB,rem_3,XGB,micro,12,"solenoid, pressure_measurement, address",0.9821,0.9812,0.9812,0.9812,0.9812,0.0012,0.2283,3.5413,2.8595,20.6505,27.0514
+function,WFI-RF,rem_3,XGB,micro,12,"solenoid, pressure_measurement, address",0.9821,0.9812,0.9812,0.9812,0.9812,0.0012,0.2283,7.6107,2.7278,22.2222,32.5606
+function,WFI-XGB,rem_4,XGB,micro,11,"solenoid, address, pressure_measurement, control_scheme",0.9831,0.9809,0.9809,0.9809,0.9809,0.0013,0.227,3.5413,2.8595,19.7719,26.1727
+function,WFI-RF,rem_4,XGB,micro,11,"solenoid, address, pressure_measurement, control_scheme",0.9831,0.9809,0.9809,0.9809,0.9809,0.0013,0.227,7.6107,2.7278,21.703,32.0414
+function,WFI-RF,rem_4,XGB,weighted,11,"solenoid, address, pressure_measurement, control_scheme",0.9825,0.9809,0.9805,0.9809,0.9801,0.0013,0.227,7.6107,2.7278,21.775,32.1135
+function,WFI-XGB,rem_4,XGB,weighted,11,"solenoid, address, pressure_measurement, control_scheme",0.9825,0.9809,0.9805,0.9809,0.9801,0.0013,0.227,3.5413,2.8595,19.9805,26.3813
+function,WFI-RF,rem_3,XGB,weighted,12,"solenoid, pressure_measurement, address",0.9814,0.9809,0.9806,0.9809,0.98,0.0008,0.2487,7.6107,2.7278,21.9699,32.3083
+function,WFI-XGB,rem_3,XGB,weighted,12,"solenoid, pressure_measurement, address",0.9814,0.9809,0.9806,0.9809,0.98,0.0008,0.2487,3.5413,2.8595,20.3575,26.7583
+function,SP,rem_4,XGB,micro,11,"pump, solenoid, length, control_scheme",0.9811,0.9803,0.9803,0.9803,0.9803,0.0018,0.2385,0.2713,2.6469,20.5294,23.4475
+function,SP,rem_4,XGB,weighted,11,"pump, solenoid, length, control_scheme",0.9803,0.9803,0.9801,0.9803,0.9797,0.0018,0.2385,0.2713,2.6469,20.0949,23.013
+function,SP,rem_5,XGB,micro,10,"pump, control_scheme, solenoid, crc_rate, length",0.9814,0.9802,0.9802,0.9802,0.9802,0.0018,0.2602,0.2713,2.6469,20.2121,23.1302
+function,SP,rem_5,XGB,weighted,10,"pump, control_scheme, solenoid, crc_rate, length",0.9807,0.9802,0.9798,0.9802,0.9794,0.0018,0.2602,0.2713,2.6469,20.4936,23.4118
+function,WFI-XGB,rem_5,RF,micro,10,"deadband, control_scheme, solenoid, pressure_measurement, address",0.9794,0.9775,0.9775,0.9775,0.9775,0.0025,0.1849,3.5413,8.2624,60.5539,72.3576
+function,WFI-XGB,rem_5,RF,weighted,10,"deadband, control_scheme, solenoid, pressure_measurement, address",0.9783,0.9775,0.9767,0.9775,0.9766,0.0025,0.1849,3.5413,8.2624,60.1888,71.9925
+function,WFI-RF,rem_5,XGB,micro,10,"system_mode, control_scheme, solenoid, pressure_measurement, address",0.9787,0.9767,0.9767,0.9767,0.9767,0.0024,0.3342,7.6107,2.7278,21.1483,31.4867
+function,WFI-RF,rem_5,XGB,weighted,10,"system_mode, control_scheme, solenoid, pressure_measurement, address",0.9773,0.9767,0.9759,0.9767,0.9753,0.0024,0.3342,7.6107,2.7278,22.4479,32.7864
+function,WFI-RF,rem_6,RF,micro,9,"system_mode, pump, control_scheme, solenoid, pressure_measurement, address",0.9784,0.9766,0.9766,0.9766,0.9766,0.0056,0.3355,7.6107,8.1132,72.1049,87.8287
+function,WFI-RF,rem_6,RF,weighted,9,"system_mode, pump, control_scheme, solenoid, pressure_measurement, address",0.9774,0.9766,0.9753,0.9766,0.9756,0.0056,0.3355,7.6107,8.1132,72.0165,87.7403
+function,SP,rem_6,RF,micro,9,"system_mode, pump, control_scheme, solenoid, crc_rate, length",0.978,0.9764,0.9764,0.9764,0.9764,0.0056,0.3329,0.2713,8.3521,102.2112,110.8346
+function,SP,rem_6,RF,weighted,9,"system_mode, pump, control_scheme, solenoid, crc_rate, length",0.9769,0.9764,0.9751,0.9764,0.9754,0.0056,0.3329,0.2713,8.3521,100.4084,109.0318
+function,SP,rem_6,XGB,micro,9,"system_mode, pump, control_scheme, solenoid, crc_rate, length",0.9762,0.9751,0.9751,0.9751,0.9751,0.0023,0.3954,0.2713,2.6469,19.238,22.1561
+function,SP,rem_6,XGB,weighted,9,"system_mode, pump, control_scheme, solenoid, crc_rate, length",0.9743,0.9751,0.9744,0.9751,0.9736,0.0023,0.3992,0.2713,2.6469,19.8894,22.8075
+function,WFI-XGB,rem_5,XGB,micro,10,"deadband, control_scheme, solenoid, pressure_measurement, address",0.9746,0.974,0.974,0.974,0.974,0.001,0.2691,3.5413,2.8595,20.2603,26.6611
+function,WFI-XGB,rem_5,XGB,weighted,10,"deadband, control_scheme, solenoid, pressure_measurement, address",0.9726,0.974,0.9733,0.974,0.9723,0.001,0.2691,3.5413,2.8595,21.3193,27.7201
+function,WFI-RF,rem_7,RF,micro,8,"system_mode, pump, control_scheme, solenoid, pressure_measurement, rate, address",0.9716,0.9705,0.9705,0.9705,0.9705,0.0052,0.3508,7.6107,8.1132,59.2922,75.0161
+function,WFI-RF,rem_6,XGB,micro,9,"system_mode, pump, control_scheme, solenoid, pressure_measurement, address",0.973,0.9703,0.9703,0.9703,0.9703,0.0038,0.5026,7.6107,2.7278,21.2158,31.5542
+function,WFI-RF,rem_7,RF,weighted,8,"system_mode, pump, control_scheme, solenoid, pressure_measurement, rate, address",0.9703,0.9703,0.9689,0.9703,0.9692,0.0055,0.3355,7.6107,8.1132,60.6955,76.4194
+function,WFI-RF,rem_6,XGB,weighted,9,"system_mode, pump, control_scheme, solenoid, pressure_measurement, address",0.9707,0.9703,0.9682,0.9703,0.9676,0.0038,0.5026,7.6107,2.7278,20.6365,30.9749
+function,WFI-XGB,rem_6,RF,micro,9,"deadband, setpoint, control_scheme, solenoid, pressure_measurement, address",0.971,0.9696,0.9696,0.9696,0.9696,0.0023,0.2423,3.5413,8.2624,50.1454,61.949
+function,WFI-XGB,rem_6,RF,weighted,9,"deadband, setpoint, control_scheme, solenoid, pressure_measurement, address",0.9689,0.9696,0.9687,0.9696,0.9677,0.0023,0.2423,3.5413,8.2624,50.9432,62.7469
+function,WFI-XGB,rem_6,XGB,micro,9,"deadband, setpoint, control_scheme, solenoid, pressure_measurement, address",0.9657,0.9651,0.9651,0.9651,0.9651,0.0009,0.3482,3.5413,2.8595,19.4777,25.8786
+function,WFI-XGB,rem_6,XGB,weighted,9,"deadband, setpoint, control_scheme, solenoid, pressure_measurement, address",0.9626,0.9651,0.9647,0.9651,0.9621,0.0009,0.3482,3.5413,2.8595,18.5674,24.9682
+function,SP,rem_7,RF,micro,8,"system_mode, pump, control_scheme, solenoid, crc_rate, gain, length",0.9666,0.965,0.965,0.965,0.965,0.0057,0.4082,0.2713,8.3521,84.2987,92.9221
+function,SP,rem_7,RF,weighted,8,"system_mode, pump, control_scheme, solenoid, crc_rate, gain, length",0.9645,0.965,0.9629,0.965,0.9628,0.0057,0.4082,0.2713,8.3521,86.2509,94.8743
+function,SP,rem_7,XGB,micro,8,"system_mode, pump, control_scheme, solenoid, crc_rate, gain, length",0.9656,0.9639,0.9639,0.9639,0.9639,0.0019,0.449,0.2713,2.6469,19.3116,22.2297
+function,SP,rem_7,XGB,weighted,8,"system_mode, pump, control_scheme, solenoid, crc_rate, gain, length",0.9629,0.9639,0.9631,0.9639,0.961,0.0019,0.449,0.2713,2.6469,19.421,22.3392
+function,WFI-RF,rem_7,XGB,micro,8,"system_mode, pump, control_scheme, solenoid, pressure_measurement, rate, address",0.965,0.9628,0.9628,0.9628,0.9628,0.0036,0.4923,7.6107,2.7278,21.5514,31.8898
+function,WFI-RF,rem_7,XGB,weighted,8,"system_mode, pump, control_scheme, solenoid, pressure_measurement, rate, address",0.9626,0.9628,0.961,0.9628,0.9599,0.0036,0.4923,7.6107,2.7278,21.244,31.5824
+function,WFI-RF,rem_8,RF,micro,7,"system_mode, pump, deadband, control_scheme, solenoid, pressure_measurement, rate, address",0.9617,0.9603,0.9603,0.9603,0.9603,0.005,0.4541,7.6107,8.1132,55.4707,71.1945
+function,WFI-RF,rem_8,RF,weighted,7,"system_mode, pump, deadband, control_scheme, solenoid, pressure_measurement, rate, address",0.9592,0.9603,0.9579,0.9603,0.9576,0.005,0.4541,7.6107,8.1132,54.3153,70.0391
+function,SP,rem_8,XGB,micro,7,"system_mode, pump, deadband, control_scheme, solenoid, crc_rate, gain, length",0.9575,0.9561,0.9561,0.9561,0.9561,0.0018,0.5166,0.2713,2.6469,18.8898,21.8079
+function,SP,rem_8,XGB,weighted,7,"system_mode, pump, deadband, control_scheme, solenoid, crc_rate, gain, length",0.9534,0.9561,0.9554,0.9561,0.9518,0.0018,0.5166,0.2713,2.6469,18.3543,21.2724
+function,WFI-RF,rem_8,XGB,micro,7,"system_mode, pump, deadband, control_scheme, solenoid, pressure_measurement, rate, address",0.9539,0.9534,0.9534,0.9534,0.9534,0.0035,0.5842,7.6107,2.7278,20.7996,31.138
+function,WFI-RF,rem_8,XGB,weighted,7,"system_mode, pump, deadband, control_scheme, solenoid, pressure_measurement, rate, address",0.9491,0.9534,0.951,0.9534,0.9482,0.0035,0.5842,7.6107,2.7278,19.8441,30.1825
+function,SP,rem_8,RF,weighted,7,"system_mode, pump, deadband, control_scheme, solenoid, crc_rate, gain, length",0.9486,0.9524,0.9488,0.9524,0.9477,0.0049,0.5319,0.2713,8.3521,76.9573,85.5807
+function,SP,rem_8,RF,micro,7,"system_mode, pump, deadband, control_scheme, solenoid, crc_rate, gain, length",0.9538,0.952,0.952,0.952,0.952,0.0043,0.5676,0.2713,8.3521,76.3128,84.9362
+function,WFI-XGB,rem_7,RF,micro,8,"deadband, setpoint, control_scheme, solenoid, pressure_measurement, reset_rate, address",0.9491,0.9472,0.9472,0.9472,0.9472,0.0019,0.4694,3.5413,8.2624,32.8519,44.6556
+function,WFI-XGB,rem_7,RF,weighted,8,"deadband, setpoint, control_scheme, solenoid, pressure_measurement, reset_rate, address",0.9423,0.9472,0.9446,0.9472,0.9399,0.0019,0.4694,3.5413,8.2624,33.1519,44.9556
+function,WFI-RF,rem_9,RF,micro,6,"system_mode, pump, deadband, control_scheme, solenoid, pressure_measurement, rate, gain, address",0.9457,0.9461,0.9461,0.9461,0.9461,0.0049,0.5268,7.6107,8.1132,57.4294,73.1532
+function,WFI-RF,rem_9,RF,weighted,6,"system_mode, pump, deadband, control_scheme, solenoid, pressure_measurement, rate, gain, address",0.9407,0.9459,0.9416,0.9459,0.9403,0.005,0.5472,7.6107,8.1132,59.1914,74.9152
+function,WFI-XGB,rem_7,XGB,micro,8,"deadband, setpoint, control_scheme, solenoid, pressure_measurement, reset_rate, address",0.9469,0.9456,0.9456,0.9456,0.9456,0.0014,0.4885,3.5413,2.8595,18.1265,24.5273
+function,WFI-XGB,rem_7,XGB,weighted,8,"deadband, setpoint, control_scheme, solenoid, pressure_measurement, reset_rate, address",0.9391,0.9456,0.9438,0.9456,0.9375,0.0014,0.4885,3.5413,2.8595,17.1875,23.5883
+function,WFI-RF,rem_9,XGB,micro,6,"system_mode, pump, deadband, control_scheme, solenoid, pressure_measurement, rate, gain, address",0.9404,0.9399,0.9399,0.9399,0.9399,0.0018,0.6811,7.6107,2.7278,19.1464,29.4848
+function,WFI-RF,rem_9,XGB,weighted,6,"system_mode, pump, deadband, control_scheme, solenoid, pressure_measurement, rate, gain, address",0.9309,0.9399,0.9374,0.9399,0.9303,0.0018,0.6811,7.6107,2.7278,19.657,29.9954
+function,WFI-XGB,rem_8,RF,micro,7,"system_mode, deadband, setpoint, control_scheme, solenoid, pressure_measurement, reset_rate, address",0.9384,0.9368,0.9368,0.9368,0.9368,0.0019,0.8074,3.5413,8.2624,34.0641,45.8678
+function,WFI-XGB,rem_8,RF,weighted,7,"system_mode, deadband, setpoint, control_scheme, solenoid, pressure_measurement, reset_rate, address",0.9263,0.9364,0.9301,0.9364,0.9244,0.0028,0.787,3.5413,8.2624,32.9462,44.7498
+function,WFI-XGB,rem_8,XGB,micro,7,"system_mode, deadband, setpoint, control_scheme, solenoid, pressure_measurement, reset_rate, address",0.9368,0.935,0.935,0.935,0.935,0.0008,0.8712,3.5413,2.8595,17.291,23.6918
+function,WFI-XGB,rem_8,XGB,weighted,7,"system_mode, deadband, setpoint, control_scheme, solenoid, pressure_measurement, reset_rate, address",0.9222,0.935,0.9317,0.935,0.9199,0.0008,0.8712,3.5413,2.8595,17.2756,23.6764
+function,WFI-RF,rem_10,RF,micro,5,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, pressure_measurement, rate, gain, address",0.9309,0.9311,0.9311,0.9311,0.9311,0.0039,0.7258,7.6107,8.1132,57.8426,73.5665
+function,WFI-RF,rem_10,RF,weighted,5,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, pressure_measurement, rate, gain, address",0.9196,0.9311,0.9237,0.9311,0.92,0.0039,0.7258,7.6107,8.1132,58.0327,73.7566
+function,WFI-RF,rem_10,XGB,micro,5,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, pressure_measurement, rate, gain, address",0.9254,0.9256,0.9256,0.9256,0.9256,0.0013,0.8138,7.6107,2.7278,17.8968,28.2353
+function,WFI-RF,rem_10,XGB,weighted,5,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, pressure_measurement, rate, gain, address",0.9095,0.9256,0.9216,0.9256,0.9092,0.0013,0.8138,7.6107,2.7278,18.5752,28.9136
+function,WFI-XGB,rem_9,XGB,micro,6,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, address",0.918,0.9166,0.9166,0.9166,0.9166,0,1,3.5413,2.8595,16.8664,23.2672
+function,WFI-XGB,rem_9,RF,micro,6,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, address",0.918,0.9166,0.9166,0.9166,0.9166,0,1,3.5413,8.2624,21.4959,33.2996
+function,WFI-XGB,rem_9,XGB,weighted,6,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, address",0.8916,0.9166,0.8891,0.9166,0.8892,0,1,3.5413,2.8595,17.4334,23.8342
+function,WFI-XGB,rem_9,RF,weighted,6,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, address",0.8917,0.9166,0.8891,0.9166,0.8892,0,1,3.5413,8.2624,20.7877,32.5914
+function,WFI-RF,rem_11,XGB,micro,4,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, pressure_measurement, reset_rate, rate, gain, address",0.9076,0.906,0.906,0.906,0.906,0,1,7.6107,2.7278,17.5627,27.9011
+function,WFI-RF,rem_11,XGB,weighted,4,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, pressure_measurement, reset_rate, rate, gain, address",0.8747,0.906,0.879,0.906,0.8712,0,1,7.6107,2.7278,18.4609,28.7993
+function,WFI-RF,rem_11,RF,micro,4,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, pressure_measurement, reset_rate, rate, gain, address",0.9076,0.906,0.906,0.906,0.906,0,1,7.6107,8.1132,40.3748,56.0986
+function,WFI-RF,rem_11,RF,weighted,4,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, pressure_measurement, reset_rate, rate, gain, address",0.8747,0.906,0.879,0.906,0.8712,0,1,7.6107,8.1132,40.4927,56.2166
+function,WFI-XGB,rem_11,RF,micro,4,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, gain, address",0.9043,0.9039,0.9039,0.9039,0.9039,0,1,3.5413,8.2624,12.9792,24.7829
+function,WFI-XGB,rem_10,XGB,micro,5,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, gain, address",0.9043,0.9039,0.9039,0.9039,0.9039,0,1,3.5413,2.8595,13.3238,19.7246
+function,WFI-XGB,rem_10,RF,micro,5,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, gain, address",0.9043,0.9039,0.9039,0.9039,0.9039,0,1,3.5413,8.2624,14.4916,26.2953
+function,WFI-XGB,rem_11,XGB,micro,4,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, gain, address",0.9043,0.9039,0.9039,0.9039,0.9039,0,1,3.5413,2.8595,19.969,26.3698
+function,WFI-XGB,rem_10,XGB,weighted,5,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, gain, address",0.8684,0.9039,0.8787,0.9039,0.8668,0,1,3.5413,2.8595,14.1525,20.5533
+function,WFI-XGB,rem_11,XGB,weighted,4,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, gain, address",0.8684,0.9039,0.8787,0.9039,0.8668,0,1,3.5413,2.8595,16.3535,22.7543
+function,WFI-XGB,rem_10,RF,weighted,5,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, gain, address",0.8684,0.9039,0.8787,0.9039,0.8668,0,1,3.5413,8.2624,14.0243,25.8279
+function,WFI-XGB,rem_11,RF,weighted,4,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, gain, address",0.8684,0.9039,0.8787,0.9039,0.8668,0,1,3.5413,8.2624,13.1827,24.9864
+function,WFI-XGB,rem_12,XGB,micro,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.8917,0.8931,0.8931,0.8931,0.8931,0,1,3.5413,2.8595,11.206,17.6068
+function,WFI-XGB,rem_13,RF,micro,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.8917,0.8931,0.8931,0.8931,0.8931,0,1,3.5413,8.2624,11.2093,23.013
+function,WFI-XGB,rem_12,RF,micro,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.8917,0.8931,0.8931,0.8931,0.8931,0,1,3.5413,8.2624,11.4744,23.2781
+function,WFI-RF,rem_12,RF,micro,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.8917,0.8931,0.8931,0.8931,0.8931,0,1,7.6107,8.1132,11.5074,27.2313
+function,WFI-XGB,rem_13,XGB,micro,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.8917,0.8931,0.8931,0.8931,0.8931,0,1,3.5413,2.8595,11.7234,18.1243
+function,WFI-RF,rem_12,XGB,micro,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.8917,0.8931,0.8931,0.8931,0.8931,0,1,7.6107,2.7278,11.7703,22.1087
+function,WFI-RF,rem_13,RF,micro,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, rate, gain, length, address",0.8917,0.8931,0.8931,0.8931,0.8931,0,1,7.6107,8.1132,11.8023,27.5261
+function,WFI-RF,rem_13,XGB,micro,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, rate, gain, length, address",0.8917,0.8931,0.8931,0.8931,0.8931,0,1,7.6107,2.7278,11.9717,22.3101
+function,WFI-RF,rem_12,XGB,weighted,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.841,0.8931,0.7992,0.8931,0.8433,0,1,7.6107,2.7278,12.4776,22.8161
+function,WFI-RF,rem_13,XGB,weighted,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, rate, gain, length, address",0.841,0.8931,0.7992,0.8931,0.8433,0,1,7.6107,2.7278,11.2113,21.5497
+function,WFI-RF,rem_12,RF,weighted,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.841,0.8931,0.7992,0.8931,0.8433,0,1,7.6107,8.1132,11.5089,27.2328
+function,WFI-RF,rem_13,RF,weighted,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, rate, gain, length, address",0.841,0.8931,0.7992,0.8931,0.8433,0,1,7.6107,8.1132,11.4574,27.1813
+function,WFI-XGB,rem_12,XGB,weighted,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.841,0.8931,0.7992,0.8931,0.8433,0,1,3.5413,2.8595,11.2096,17.6104
+function,WFI-XGB,rem_13,XGB,weighted,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.841,0.8931,0.7992,0.8931,0.8433,0,1,3.5413,2.8595,11.2092,17.6101
+function,WFI-XGB,rem_12,RF,weighted,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.841,0.8931,0.7992,0.8931,0.8433,0,1,3.5413,8.2624,11.7487,23.5524
+function,WFI-XGB,rem_13,RF,weighted,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.841,0.8931,0.7992,0.8931,0.8433,0,1,3.5413,8.2624,11.5564,23.3601
+function,WFI-RF,rem_14,RF,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, length, address",0.8875,0.8885,0.8885,0.8885,0.8885,0,1,7.6107,8.1132,11.2611,26.985
+function,WFI-RF,rem_14,XGB,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, length, address",0.8875,0.8885,0.8885,0.8885,0.8885,0,1,7.6107,2.7278,13.9341,24.2725
+function,WFI-RF,rem_14,XGB,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, length, address",0.8367,0.8885,0.7953,0.8885,0.8386,0,1,7.6107,2.7278,13.2694,23.6078
+function,WFI-RF,rem_14,RF,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, length, address",0.8367,0.8885,0.7953,0.8885,0.8386,0,1,7.6107,8.1132,11.5883,27.3122
+function,WFI-XGB,rem_14,RF,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.8743,0.8749,0.8749,0.8749,0.8749,0,1,3.5413,8.2624,8.3682,20.1719
+function,WFI-XGB,rem_14,XGB,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.8743,0.8749,0.8749,0.8749,0.8749,0,1,3.5413,2.8595,9.3624,15.7633
+function,WFI-XGB,rem_14,XGB,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.8204,0.8749,0.7853,0.8749,0.8209,0,1,3.5413,2.8595,9.5869,15.9878
+function,WFI-XGB,rem_14,RF,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.8204,0.8749,0.7853,0.8749,0.8209,0,1,3.5413,8.2624,9.1355,20.9392
+function,SP,rem_14,XGB,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, length",0.8351,0.8369,0.8369,0.8369,0.8369,0,1,0.2713,2.6469,7.2904,10.2085
+function,SP,rem_14,RF,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, length",0.8351,0.8369,0.8369,0.8369,0.8369,0,1,0.2713,8.3521,8.5685,17.1919
+function,SP,rem_13,XGB,micro,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, reset_rate, rate, gain, length",0.8351,0.8369,0.8369,0.8369,0.8369,0,1,0.2713,2.6469,15.2481,18.1663
+function,SP,rem_13,XGB,weighted,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, reset_rate, rate, gain, length",0.7636,0.8369,0.7234,0.8369,0.7656,0,1,0.2713,2.6469,15.5297,18.4478
+function,SP,rem_14,XGB,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, length",0.7636,0.8369,0.7234,0.8369,0.7656,0,1,0.2713,2.6469,7.0232,9.9413
+function,SP,rem_14,RF,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, length",0.7636,0.8369,0.7234,0.8369,0.7656,0,1,0.2713,8.3521,8.9888,17.6122
+function,SP,rem_13,RF,micro,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, reset_rate, rate, gain, length",0.8351,0.8368,0.8368,0.8368,0.8368,0,1,0.2713,8.3521,55.7682,64.3916
+function,SP,rem_13,RF,weighted,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, reset_rate, rate, gain, length",0.7638,0.8368,0.7231,0.8368,0.7655,0,1,0.2713,8.3521,53.033,61.6564
+function,SP,rem_11,XGB,weighted,4,"system_mode, pump, deadband, control_scheme, solenoid, function, crc_rate, cycle_time, rate, gain, length",0.7927,0.8358,0.7857,0.8358,0.7963,0.0022,0.9668,0.2713,2.6469,18.2617,21.1798
+function,SP,rem_12,XGB,micro,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, rate, gain, length",0.8355,0.8349,0.8349,0.8349,0.8349,0.0007,0.9872,0.2713,2.6469,16.484,19.4021
+function,SP,rem_12,XGB,weighted,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, rate, gain, length",0.7802,0.8346,0.7755,0.8346,0.7805,0.0006,0.9898,0.2713,2.6469,16.8863,19.8044
+function,SP,rem_11,XGB,micro,4,"system_mode, pump, deadband, control_scheme, solenoid, function, crc_rate, cycle_time, rate, gain, length",0.834,0.8336,0.8336,0.8336,0.8336,0.0016,0.986,0.2713,2.6469,17.8813,20.7995
+function,SP,rem_10,XGB,micro,5,"system_mode, pump, deadband, control_scheme, solenoid, function, crc_rate, rate, gain, length",0.8306,0.8328,0.8328,0.8328,0.8328,0.0022,0.9681,0.2713,2.6469,18.2518,21.1699
+function,SP,rem_10,XGB,weighted,5,"system_mode, pump, deadband, control_scheme, solenoid, function, crc_rate, rate, gain, length",0.7998,0.8318,0.7924,0.8318,0.8012,0.0016,0.9643,0.2713,2.6469,18.9223,21.8405
+function,SP,rem_12,RF,micro,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, rate, gain, length",0.8328,0.8312,0.8312,0.8312,0.8312,0.0001,1,0.2713,8.3521,87.5048,96.1282
+function,SP,rem_12,RF,weighted,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, rate, gain, length",0.7678,0.8312,0.7582,0.8312,0.767,0.0001,1,0.2713,8.3521,88.6585,97.2819
+function,SP,rem_9,XGB,micro,6,"system_mode, pump, deadband, control_scheme, solenoid, function, crc_rate, gain, length",0.8292,0.8259,0.8259,0.8259,0.8259,0.0019,0.9758,0.2713,2.6469,19.4275,22.3456
+function,SP,rem_9,XGB,weighted,6,"system_mode, pump, deadband, control_scheme, solenoid, function, crc_rate, gain, length",0.8003,0.8259,0.7869,0.8259,0.7977,0.0019,0.9758,0.2713,2.6469,18.3884,21.3066
+function,SP,rem_11,RF,micro,4,"system_mode, pump, deadband, control_scheme, solenoid, function, crc_rate, cycle_time, rate, gain, length",0.8285,0.8239,0.8239,0.8239,0.8239,0.0032,0.949,0.2713,8.3521,113.031,121.6544
+function,SP,rem_11,RF,weighted,4,"system_mode, pump, deadband, control_scheme, solenoid, function, crc_rate, cycle_time, rate, gain, length",0.7898,0.8239,0.7728,0.8239,0.7865,0.0032,0.949,0.2713,8.3521,110.2037,118.8271
+function,SP,rem_10,RF,micro,5,"system_mode, pump, deadband, control_scheme, solenoid, function, crc_rate, rate, gain, length",0.8235,0.8218,0.8218,0.8218,0.8218,0.0039,0.9413,0.2713,8.3521,105.8145,114.4379
+function,SP,rem_10,RF,weighted,5,"system_mode, pump, deadband, control_scheme, solenoid, function, crc_rate, rate, gain, length",0.794,0.8218,0.7814,0.8218,0.7935,0.0039,0.9413,0.2713,8.3521,103.5336,112.157
+function,SP,rem_9,RF,micro,6,"system_mode, pump, deadband, control_scheme, solenoid, function, crc_rate, gain, length",0.8193,0.8157,0.8157,0.8157,0.8157,0.0041,0.9324,0.2713,8.3521,101.9297,110.5531
+function,SP,rem_9,RF,weighted,6,"system_mode, pump, deadband, control_scheme, solenoid, function, crc_rate, gain, length",0.7937,0.8157,0.7806,0.8157,0.7905,0.0041,0.9324,0.2713,8.3521,99.8171,108.4405
+command,WFI-RF,RFE,XGB,micro,9,,0.9635,0.9633,0.9633,0.9633,0.9633,0.003,0.187,4.8685,9.4514,8.6478,22.9677
+command,WFI-RF,RFE,XGB,weighted,9,,0.9623,0.9633,0.9631,0.9633,0.9614,0.003,0.187,4.8685,9.4514,8.9634,23.2832
+command,WFI-RF,SPFS,XGB,micro,9,,0.9635,0.9633,0.9633,0.9633,0.9633,0.003,0.187,4.8685,8.3238,8.8148,22.007
+command,WFI-RF,SPFS,XGB,weighted,9,,0.9623,0.9633,0.9631,0.9633,0.9614,0.003,0.187,4.8685,8.3238,8.9284,22.1206
+command,WFI-RF,None,XGB,micro,9,,0.9635,0.9633,0.9633,0.9633,0.9633,0.003,0.187,4.8685,1.0184,9.7587,15.6456
+command,WFI-RF,None,XGB,weighted,9,,0.9623,0.9633,0.9631,0.9633,0.9614,0.003,0.187,4.8685,1.0184,9.1264,15.0132
+command,WFI-RF,rem_1,XGB,micro,8,control_scheme,0.9628,0.9623,0.9623,0.9623,0.9623,0.004,0.201,4.8685,1.0184,8.8885,14.7753
+command,WFI-RF,rem_1,XGB,weighted,8,control_scheme,0.9613,0.9623,0.9619,0.9623,0.9603,0.004,0.201,4.8685,1.0184,9.0959,14.9827
+command,WFI-RF,rem_2,XGB,micro,7,"pump, control_scheme",0.9548,0.9551,0.9551,0.9551,0.9551,0.0039,0.3053,4.8685,1.0184,8.3404,14.2272
+command,WFI-RF,rem_2,XGB,weighted,7,"pump, control_scheme",0.9522,0.9559,0.9553,0.9559,0.9533,0.0045,0.2786,4.8685,1.0184,8.7208,14.6076
+command,WFI-RF,rem_3,XGB,micro,6,"system_mode, pump, control_scheme",0.9429,0.9417,0.9417,0.9417,0.9417,0.0082,0.4593,4.8685,1.0184,8.0928,13.9796
+command,WFI-RF,rem_3,XGB,weighted,6,"system_mode, pump, control_scheme",0.9385,0.9417,0.9394,0.9417,0.9368,0.0082,0.4593,4.8685,1.0184,8.9074,14.7943
+command,WFI-RF,rem_4,XGB,micro,5,"system_mode, pump, rate, control_scheme",0.9239,0.9229,0.9229,0.9229,0.9229,0.0066,0.486,4.8685,1.0184,7.9411,13.8279
+command,WFI-RF,rem_4,XGB,weighted,5,"system_mode, pump, rate, control_scheme",0.9185,0.9229,0.923,0.9229,0.9168,0.0066,0.486,4.8685,1.0184,7.9429,13.8297
+command,WFI-RF,rem_5,XGB,micro,4,"system_mode, pump, deadband, control_scheme, rate",0.9074,0.9024,0.9024,0.9024,0.9024,0.006,0.5776,4.8685,1.0184,7.6153,13.5021
+command,WFI-RF,rem_5,XGB,weighted,4,"system_mode, pump, deadband, control_scheme, rate",0.8988,0.9024,0.9027,0.9024,0.8924,0.006,0.5776,4.8685,1.0184,8.1055,13.9923
+command,WFI-RF,rem_6,XGB,micro,3,"system_mode, pump, deadband, control_scheme, rate, gain",0.8721,0.8704,0.8704,0.8704,0.8704,0.0064,0.6628,4.8685,1.0184,7.9309,13.8177
+command,WFI-RF,rem_6,XGB,weighted,3,"system_mode, pump, deadband, control_scheme, rate, gain",0.8569,0.8704,0.8714,0.8704,0.8533,0.0064,0.6628,4.8685,1.0184,7.4932,13.3801
+command,WFI-RF,rem_7,XGB,micro,2,"system_mode, pump, deadband, setpoint, control_scheme, rate, gain",0.8391,0.8383,0.8383,0.8383,0.8383,0.0035,0.8232,4.8685,1.0184,6.8562,12.743
+command,WFI-RF,rem_7,XGB,weighted,2,"system_mode, pump, deadband, setpoint, control_scheme, rate, gain",0.8057,0.8374,0.8405,0.8374,0.8039,0.003,0.827,4.8685,1.0184,7.5392,13.426
+command,WFI-RF,rem_8,XGB,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, reset_rate, rate, gain",0.7956,0.7958,0.7958,0.7958,0.7958,0,1,4.8685,1.0184,8.1683,14.0552
+command,WFI-RF,rem_8,XGB,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, reset_rate, rate, gain",0.7282,0.7958,0.7574,0.7958,0.7267,0,1,4.8685,1.0184,6.1024,11.9892
+command,WFI-RF,RFE,RF,micro,9,,0.9713,0.9726,0.9726,0.9726,0.9726,0.0056,0.131,4.8685,34.1224,40.07,79.0608
+command,WFI-RF,RFE,RF,weighted,9,,0.9705,0.9726,0.9718,0.9726,0.9716,0.0056,0.131,4.8685,34.1224,39.6631,78.6539
+command,WFI-RF,SPFS,RF,micro,9,,0.9713,0.9726,0.9726,0.9726,0.9726,0.0056,0.131,4.8685,33.4548,37.6976,76.0208
+command,WFI-RF,SPFS,RF,weighted,9,,0.9705,0.9726,0.9718,0.9726,0.9716,0.0056,0.131,4.8685,33.4548,37.4123,75.7355
+command,WFI-RF,None,RF,micro,9,,0.9717,0.9732,0.9732,0.9732,0.9732,0.0048,0.1374,4.8685,4.0974,38.6432,47.6091
+command,WFI-RF,None,RF,weighted,9,,0.9707,0.9725,0.9717,0.9725,0.9715,0.0056,0.131,4.8685,4.0974,39.7393,48.7052
+command,WFI-RF,rem_1,RF,micro,8,control_scheme,0.9694,0.9705,0.9705,0.9705,0.9705,0.0064,0.1349,4.8685,4.0974,30.9746,39.9405
+command,WFI-RF,rem_1,RF,weighted,8,control_scheme,0.9685,0.971,0.97,0.971,0.9699,0.0064,0.1336,4.8685,4.0974,31.9038,40.8697
+command,WFI-RF,rem_2,RF,micro,7,"pump, control_scheme",0.9657,0.9672,0.9672,0.9672,0.9672,0.0078,0.187,4.8685,4.0974,33.5912,42.5571
+command,WFI-RF,rem_2,RF,weighted,7,"pump, control_scheme",0.964,0.9672,0.9661,0.9672,0.9656,0.0078,0.187,4.8685,4.0974,33.2904,42.2563
+command,WFI-RF,rem_3,RF,micro,6,"system_mode, pump, control_scheme",0.9522,0.9532,0.9532,0.9532,0.9532,0.0139,0.3295,4.8685,4.0974,36.3314,45.2972
+command,WFI-RF,rem_3,RF,weighted,6,"system_mode, pump, control_scheme",0.9498,0.9532,0.951,0.9532,0.9508,0.0139,0.3295,4.8685,4.0974,36.2835,45.2493
+command,WFI-RF,rem_4,RF,micro,5,"system_mode, pump, rate, control_scheme",0.9386,0.9368,0.9368,0.9368,0.9368,0.0151,0.3219,4.8685,4.0974,40.4426,49.4084
+command,WFI-RF,rem_4,RF,weighted,5,"system_mode, pump, rate, control_scheme",0.9363,0.9368,0.9348,0.9368,0.9345,0.0151,0.3219,4.8685,4.0974,40.1563,49.1221
+command,WFI-RF,rem_5,RF,micro,4,"system_mode, pump, deadband, control_scheme, rate",0.9175,0.9133,0.9133,0.9133,0.9133,0.0122,0.4453,4.8685,4.0974,36.2357,45.2015
+command,WFI-RF,rem_5,RF,weighted,4,"system_mode, pump, deadband, control_scheme, rate",0.9126,0.9133,0.9102,0.9133,0.9078,0.0122,0.4453,4.8685,4.0974,34.806,43.7719
+command,WFI-RF,rem_6,RF,micro,3,"system_mode, pump, deadband, control_scheme, rate, gain",0.8853,0.8837,0.8837,0.8837,0.8837,0.0109,0.5458,4.8685,4.0974,28.3693,37.3352
+command,WFI-RF,rem_6,RF,weighted,3,"system_mode, pump, deadband, control_scheme, rate, gain",0.8763,0.8837,0.8795,0.8837,0.8732,0.0109,0.5458,4.8685,4.0974,28.1024,37.0683
+command,WFI-RF,rem_7,RF,micro,2,"system_mode, pump, deadband, setpoint, control_scheme, rate, gain",0.852,0.8476,0.8476,0.8476,0.8476,0.0071,0.729,4.8685,4.0974,31.3645,40.3303
+command,WFI-RF,rem_7,RF,weighted,2,"system_mode, pump, deadband, setpoint, control_scheme, rate, gain",0.8301,0.8476,0.842,0.8476,0.8237,0.0071,0.729,4.8685,4.0974,32.2204,41.1863
+command,WFI-RF,rem_8,RF,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, reset_rate, rate, gain",0.7956,0.7958,0.7958,0.7958,0.7958,0,1,4.8685,4.0974,25.9953,34.9611
+command,WFI-RF,rem_8,RF,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, reset_rate, rate, gain",0.7282,0.7958,0.7574,0.7958,0.7267,0,1,4.8685,4.0974,26.7112,35.677
+command,SP,RFE,XGB,micro,9,,0.9635,0.9633,0.9633,0.9633,0.9633,0.003,0.187,0.0731,9.2452,8.6388,17.9571
+command,SP,RFE,XGB,weighted,9,,0.9623,0.9633,0.9631,0.9633,0.9614,0.003,0.187,0.0731,9.2452,9.1809,18.4992
+command,SP,SPFS,XGB,micro,9,,0.9635,0.9633,0.9633,0.9633,0.9633,0.003,0.187,0.0731,8.0259,8.523,16.622
+command,SP,SPFS,XGB,weighted,9,,0.9623,0.9633,0.9631,0.9633,0.9614,0.003,0.187,0.0731,8.0259,9.2356,17.3346
+command,SP,None,XGB,micro,9,,0.9635,0.9633,0.9633,0.9633,0.9633,0.003,0.187,0.0731,1.05,8.6975,9.8206
+command,SP,None,XGB,weighted,9,,0.9623,0.9633,0.9631,0.9633,0.9614,0.003,0.187,0.0731,1.05,8.4569,9.58
+command,SP,rem_1,XGB,micro,8,control_scheme,0.9628,0.9623,0.9623,0.9623,0.9623,0.004,0.201,0.0731,1.05,8.474,9.5971
+command,SP,rem_1,XGB,weighted,8,control_scheme,0.9613,0.9623,0.9619,0.9623,0.9603,0.004,0.201,0.0731,1.05,10.4292,11.5523
+command,SP,rem_2,XGB,micro,7,"pump, control_scheme",0.9548,0.9551,0.9551,0.9551,0.9551,0.0039,0.3053,0.0731,1.05,9.2926,10.4157
+command,SP,rem_2,XGB,weighted,7,"pump, control_scheme",0.9522,0.9559,0.9553,0.9559,0.9533,0.0045,0.2786,0.0731,1.05,9.3273,10.4504
+command,SP,rem_3,XGB,micro,6,"system_mode, pump, control_scheme",0.9429,0.9417,0.9417,0.9417,0.9417,0.0082,0.4593,0.0731,1.05,9.2866,10.4097
+command,SP,rem_3,XGB,weighted,6,"system_mode, pump, control_scheme",0.9385,0.9417,0.9394,0.9417,0.9368,0.0082,0.4593,0.0731,1.05,8.4927,9.6158
+command,SP,rem_4,XGB,micro,5,"system_mode, pump, gain, control_scheme",0.9134,0.9137,0.9137,0.9137,0.9137,0.0066,0.5394,0.0731,1.05,8.3711,9.4942
+command,SP,rem_4,XGB,weighted,5,"system_mode, pump, gain, control_scheme",0.9057,0.9137,0.9136,0.9137,0.9055,0.0066,0.5394,0.0731,1.05,8.2372,9.3603
+command,SP,rem_5,XGB,micro,4,"system_mode, pump, deadband, control_scheme, gain",0.8961,0.8898,0.8898,0.8898,0.8898,0.0061,0.6781,0.0731,1.05,8.3421,9.4652
+command,SP,rem_5,XGB,weighted,4,"system_mode, pump, deadband, control_scheme, gain",0.8847,0.8898,0.8892,0.8898,0.8756,0.0061,0.6781,0.0731,1.05,7.5701,8.6932
+command,SP,rem_6,XGB,micro,3,"system_mode, pump, deadband, control_scheme, rate, gain",0.8721,0.8704,0.8704,0.8704,0.8704,0.0064,0.6628,0.0731,1.05,7.2943,8.4174
+command,SP,rem_6,XGB,weighted,3,"system_mode, pump, deadband, control_scheme, rate, gain",0.8569,0.8704,0.8714,0.8704,0.8533,0.0064,0.6628,0.0731,1.05,7.3801,8.5032
+command,SP,rem_7,XGB,micro,2,"system_mode, pump, deadband, control_scheme, cycle_time, rate, gain",0.8374,0.8368,0.8368,0.8368,0.8368,0.0054,0.7379,0.0731,1.05,7.5034,8.6265
+command,SP,rem_7,XGB,weighted,2,"system_mode, pump, deadband, control_scheme, cycle_time, rate, gain",0.8108,0.8365,0.8383,0.8365,0.8076,0.0055,0.7137,0.0731,1.05,7.2111,8.3342
+command,SP,rem_8,XGB,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, cycle_time, rate, gain",0.7839,0.7865,0.7865,0.7865,0.7865,0.0007,0.9835,0.0731,1.05,6.3462,7.4693
+command,SP,rem_8,XGB,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, cycle_time, rate, gain",0.7103,0.7865,0.7714,0.7865,0.7137,0.0007,0.9835,0.0731,1.05,6.2816,7.4047
+command,SP,RFE,RF,micro,9,,0.9711,0.9729,0.9729,0.9729,0.9729,0.0048,0.1374,0.0731,33.4563,38.1948,71.7242
+command,SP,RFE,RF,weighted,9,,0.9699,0.9729,0.972,0.9729,0.9718,0.0056,0.1298,0.0731,33.4563,37.8049,71.3343
+command,SP,SPFS,RF,micro,9,,0.9711,0.9729,0.9729,0.9729,0.9729,0.0048,0.1374,0.0731,34.1601,38.44,72.6731
+command,SP,SPFS,RF,weighted,9,,0.9699,0.9729,0.972,0.9729,0.9718,0.0056,0.1298,0.0731,34.1601,39.7892,74.0224
+command,SP,None,RF,micro,9,,0.9717,0.9732,0.9732,0.9732,0.9732,0.0048,0.1374,0.0731,4.3734,39.2675,43.7139
+command,SP,None,RF,weighted,9,,0.9707,0.9725,0.9717,0.9725,0.9715,0.0056,0.131,0.0731,4.3734,39.5677,44.0142
+command,SP,rem_1,RF,micro,8,control_scheme,0.97,0.9719,0.9719,0.9719,0.9719,0.0055,0.1361,0.0731,4.3734,31.1479,35.5944
+command,SP,rem_1,RF,weighted,8,control_scheme,0.969,0.9706,0.9697,0.9706,0.9692,0.0068,0.1514,0.0731,4.3734,31.4977,35.9441
+command,SP,rem_2,RF,micro,7,"pump, control_scheme",0.9657,0.967,0.967,0.967,0.967,0.0078,0.1896,0.0731,4.3734,33.4114,37.8579
+command,SP,rem_2,RF,weighted,7,"pump, control_scheme",0.964,0.967,0.9659,0.967,0.9655,0.0078,0.1896,0.0731,4.3734,34.7952,39.2417
+command,SP,rem_3,RF,micro,6,"system_mode, pump, control_scheme",0.9522,0.9532,0.9532,0.9532,0.9532,0.0139,0.3295,0.0731,4.3734,36.6348,41.0812
+command,SP,rem_3,RF,weighted,6,"system_mode, pump, control_scheme",0.9498,0.9532,0.951,0.9532,0.9507,0.0139,0.3295,0.0731,4.3734,37.1249,41.5714
+command,SP,rem_4,RF,micro,5,"system_mode, pump, gain, control_scheme",0.9304,0.9282,0.9282,0.9282,0.9282,0.0131,0.4084,0.0731,4.3734,38.5458,42.9923
+command,SP,rem_4,RF,weighted,5,"system_mode, pump, gain, control_scheme",0.9268,0.9282,0.9248,0.9282,0.924,0.0131,0.4084,0.0731,4.3734,37.1703,41.6168
+command,SP,rem_5,RF,micro,4,"system_mode, pump, deadband, control_scheme, gain",0.9037,0.8998,0.8998,0.8998,0.8998,0.0109,0.5509,0.0731,4.3734,33.2055,37.652
+command,SP,rem_5,RF,weighted,4,"system_mode, pump, deadband, control_scheme, gain",0.896,0.8998,0.8955,0.8998,0.8907,0.0109,0.5509,0.0731,4.3734,33.2837,37.7301
+command,SP,rem_6,RF,micro,3,"system_mode, pump, deadband, control_scheme, rate, gain",0.8855,0.8835,0.8835,0.8835,0.8835,0.0109,0.5458,0.0731,4.3734,28.9728,33.4193
+command,SP,rem_6,RF,weighted,3,"system_mode, pump, deadband, control_scheme, rate, gain",0.8765,0.8835,0.8793,0.8835,0.873,0.0109,0.5458,0.0731,4.3734,29.5978,34.0443
+command,SP,rem_7,RF,micro,2,"system_mode, pump, deadband, control_scheme, cycle_time, rate, gain",0.8535,0.8526,0.8526,0.8526,0.8526,0.0105,0.5712,0.0731,4.3734,31.8757,36.3222
+command,SP,rem_7,RF,weighted,2,"system_mode, pump, deadband, control_scheme, cycle_time, rate, gain",0.8397,0.8538,0.8466,0.8538,0.8382,0.0112,0.5585,0.0731,4.3734,32.6075,37.054
+command,SP,rem_8,RF,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, cycle_time, rate, gain",0.8091,0.8065,0.8065,0.8065,0.8065,0.0045,0.8461,0.0731,4.3734,44.2579,48.7044
+command,SP,rem_8,RF,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, cycle_time, rate, gain",0.7669,0.8065,0.7975,0.8065,0.7607,0.0045,0.8461,0.0731,4.3734,44.7006,49.1471
+command,WFI-XGB,RFE,XGB,micro,9,,0.9635,0.9633,0.9633,0.9633,0.9633,0.003,0.187,1.2796,11.5133,8.8515,21.6444
+command,WFI-XGB,RFE,XGB,weighted,9,,0.9623,0.9633,0.9631,0.9633,0.9614,0.003,0.187,1.2796,11.5133,10.6922,23.4851
+command,WFI-XGB,SPFS,XGB,micro,9,,0.9635,0.9633,0.9633,0.9633,0.9633,0.003,0.187,1.2796,8.9221,11.4165,21.6182
+command,WFI-XGB,SPFS,XGB,weighted,9,,0.9623,0.9633,0.9631,0.9633,0.9614,0.003,0.187,1.2796,8.9221,10.8668,21.0685
+command,WFI-XGB,None,XGB,micro,9,,0.9635,0.9633,0.9633,0.9633,0.9633,0.003,0.187,1.2796,1.2065,11.047,13.5332
+command,WFI-XGB,None,XGB,weighted,9,,0.9623,0.9633,0.9631,0.9633,0.9614,0.003,0.187,1.2796,1.2065,10.0405,12.5267
+command,WFI-XGB,rem_1,XGB,micro,8,control_scheme,0.9628,0.9623,0.9623,0.9623,0.9623,0.004,0.201,1.2796,1.2065,9.5349,12.0211
+command,WFI-XGB,rem_1,XGB,weighted,8,control_scheme,0.9613,0.9623,0.9619,0.9623,0.9603,0.004,0.201,1.2796,1.2065,10.2882,12.7744
+command,WFI-XGB,rem_2,XGB,micro,7,"deadband, control_scheme",0.9499,0.9466,0.9466,0.9466,0.9466,0.0032,0.2634,1.2796,1.2065,9.9239,12.4101
+command,WFI-XGB,rem_2,XGB,weighted,7,"deadband, control_scheme",0.947,0.9466,0.9467,0.9466,0.9429,0.0032,0.2634,1.2796,1.2065,9.3406,11.8268
+command,WFI-XGB,rem_3,XGB,micro,6,"deadband, setpoint, control_scheme",0.928,0.9253,0.9253,0.9253,0.9253,0.0033,0.313,1.2796,1.2065,8.7733,11.2595
+command,WFI-XGB,rem_3,XGB,weighted,6,"deadband, setpoint, control_scheme",0.9232,0.9253,0.9272,0.9253,0.9195,0.0033,0.313,1.2796,1.2065,9.3473,11.8335
+command,WFI-XGB,rem_4,XGB,micro,5,"deadband, setpoint, reset_rate, control_scheme",0.8871,0.8796,0.8796,0.8796,0.8796,0.0036,0.5293,1.2796,1.2065,8.195,10.6812
+command,WFI-XGB,rem_4,XGB,weighted,5,"deadband, setpoint, reset_rate, control_scheme",0.8717,0.8796,0.8831,0.8796,0.8635,0.0036,0.5293,1.2796,1.2065,8.6259,11.1121
+command,WFI-XGB,rem_5,XGB,micro,4,"system_mode, deadband, setpoint, control_scheme, reset_rate",0.8651,0.8574,0.8574,0.8574,0.8574,0.0066,0.8295,1.2796,1.2065,7.5996,10.0858
+command,WFI-XGB,rem_5,XGB,weighted,4,"system_mode, deadband, setpoint, control_scheme, reset_rate",0.8404,0.8574,0.8515,0.8574,0.8312,0.0066,0.8295,1.2796,1.2065,7.7548,10.241
+command,WFI-XGB,rem_6,XGB,micro,3,"system_mode, deadband, setpoint, control_scheme, reset_rate, gain",0.8206,0.8233,0.8233,0.8233,0.8233,0.0005,0.9898,1.2796,1.2065,6.7367,9.2228
+command,WFI-XGB,rem_6,XGB,weighted,3,"system_mode, deadband, setpoint, control_scheme, reset_rate, gain",0.7702,0.8233,0.818,0.8233,0.773,0.0005,0.9898,1.2796,1.2065,6.6622,9.1484
+command,WFI-XGB,rem_7,XGB,micro,2,"system_mode, deadband, setpoint, control_scheme, cycle_time, reset_rate, gain",0.7902,0.7915,0.7915,0.7915,0.7915,0,1,1.2796,1.2065,3.5564,6.0426
+command,WFI-XGB,rem_7,XGB,weighted,2,"system_mode, deadband, setpoint, control_scheme, cycle_time, reset_rate, gain",0.718,0.7915,0.7579,0.7915,0.7184,0,1,1.2796,1.2065,3.6254,6.1116
+command,WFI-XGB,rem_8,XGB,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, cycle_time, reset_rate, gain",0.7902,0.7915,0.7915,0.7915,0.7915,0,1,1.2796,1.2065,3.0075,5.4937
+command,WFI-XGB,rem_8,XGB,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, cycle_time, reset_rate, gain",0.718,0.7915,0.7579,0.7915,0.7184,0,1,1.2796,1.2065,3.6003,6.0865
+command,WFI-XGB,RFE,RF,micro,9,,0.9711,0.9722,0.9722,0.9722,0.9722,0.0056,0.1323,1.2796,33.3314,38.8539,73.4649
+command,WFI-XGB,RFE,RF,weighted,9,,0.9703,0.9722,0.9713,0.9722,0.9711,0.0056,0.1323,1.2796,33.3314,39.2974,73.9084
+command,WFI-XGB,SPFS,RF,micro,9,,0.9711,0.9722,0.9722,0.9722,0.9722,0.0056,0.1323,1.2796,20.5048,38.566,60.3503
+command,WFI-XGB,SPFS,RF,weighted,9,,0.9703,0.9722,0.9713,0.9722,0.9711,0.0056,0.1323,1.2796,20.5048,38.3288,60.1132
+command,WFI-XGB,None,RF,micro,9,,0.9717,0.9732,0.9732,0.9732,0.9732,0.0048,0.1374,1.2796,4.1783,38.6567,44.1146
+command,WFI-XGB,None,RF,weighted,9,,0.9707,0.9725,0.9717,0.9725,0.9715,0.0056,0.131,1.2796,4.1783,37.8363,43.2942
+command,WFI-XGB,rem_1,RF,micro,8,control_scheme,0.9698,0.9724,0.9724,0.9724,0.9724,0.0055,0.1336,1.2796,4.1783,31.8126,37.2705
+command,WFI-XGB,rem_1,RF,weighted,8,control_scheme,0.9684,0.9707,0.9699,0.9707,0.9693,0.0068,0.1501,1.2796,4.1783,31.8999,37.3578
+command,WFI-XGB,rem_2,RF,micro,7,"deadband, control_scheme",0.9536,0.955,0.955,0.955,0.955,0.0054,0.1921,1.2796,4.1783,27.038,32.4959
+command,WFI-XGB,rem_2,RF,weighted,7,"deadband, control_scheme",0.9516,0.955,0.9541,0.955,0.9526,0.0054,0.1921,1.2796,4.1783,26.4858,31.9437
+command,WFI-XGB,rem_3,RF,micro,6,"deadband, setpoint, control_scheme",0.9355,0.9344,0.9344,0.9344,0.9344,0.0057,0.2366,1.2796,4.1783,23.7407,29.1986
+command,WFI-XGB,rem_3,RF,weighted,6,"deadband, setpoint, control_scheme",0.9322,0.934,0.9332,0.934,0.9302,0.0072,0.2252,1.2796,4.1783,23.1992,28.6571
+command,WFI-XGB,rem_4,RF,micro,5,"deadband, setpoint, reset_rate, control_scheme",0.8912,0.8834,0.8834,0.8834,0.8834,0.0057,0.4682,1.2796,4.1783,16.1828,21.6407
+command,WFI-XGB,rem_4,RF,weighted,5,"deadband, setpoint, reset_rate, control_scheme",0.8782,0.8834,0.8825,0.8834,0.8697,0.0057,0.4682,1.2796,4.1783,15.2139,20.6718
+command,WFI-XGB,rem_5,RF,micro,4,"system_mode, deadband, setpoint, control_scheme, reset_rate",0.868,0.8591,0.8591,0.8591,0.8591,0.0075,0.8066,1.2796,4.1783,15.9824,21.4403
+command,WFI-XGB,rem_5,RF,weighted,4,"system_mode, deadband, setpoint, control_scheme, reset_rate",0.8456,0.8591,0.8507,0.8591,0.8352,0.0075,0.8066,1.2796,4.1783,15.6702,21.1282
+command,WFI-XGB,rem_6,RF,micro,3,"system_mode, deadband, setpoint, control_scheme, reset_rate, gain",0.821,0.8238,0.8238,0.8238,0.8238,0.0014,0.9758,1.2796,4.1783,16.927,22.385
+command,WFI-XGB,rem_6,RF,weighted,3,"system_mode, deadband, setpoint, control_scheme, reset_rate, gain",0.7721,0.8225,0.8125,0.8225,0.7742,0.0013,0.9771,1.2796,4.1783,16.9893,22.4472
+command,WFI-XGB,rem_7,RF,micro,2,"system_mode, deadband, setpoint, control_scheme, cycle_time, reset_rate, gain",0.7904,0.7917,0.7917,0.7917,0.7917,0,1,1.2796,4.1783,5.2765,10.7344
+command,WFI-XGB,rem_7,RF,weighted,2,"system_mode, deadband, setpoint, control_scheme, cycle_time, reset_rate, gain",0.7184,0.7917,0.758,0.7917,0.7187,0,1,1.2796,4.1783,5.1415,10.5994
+command,WFI-XGB,rem_8,RF,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, cycle_time, reset_rate, gain",0.7904,0.7917,0.7917,0.7917,0.7917,0,1,1.2796,4.1783,4.5202,9.9781
+command,WFI-XGB,rem_8,RF,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, cycle_time, reset_rate, gain",0.7184,0.7917,0.758,0.7917,0.7187,0,1,1.2796,4.1783,4.5856,10.0435
+all,WFI-RF,RFE,XGB,micro,14,control_scheme,0.9744,0.9726,0.9726,0.9726,0.9726,0.0002,0.1257,28.1665,98.9481,57.5878,184.7024
+all,WFI-RF,RFE,XGB,weighted,14,control_scheme,0.9737,0.9726,0.9725,0.9726,0.9718,0.0002,0.1257,28.1665,98.9481,61.5052,188.6198
+all,WFI-RF,SPFS,XGB,micro,15,,0.9744,0.9731,0.9731,0.9731,0.9731,0.0002,0.125,28.1665,86.1164,54.4091,168.692
+all,WFI-RF,SPFS,XGB,weighted,15,,0.9737,0.9731,0.9731,0.9731,0.9724,0.0002,0.125,28.1665,86.1164,60.3455,174.6284
+all,WFI-RF,None,XGB,micro,15,,0.9744,0.9731,0.9731,0.9731,0.9731,0.0002,0.125,28.1665,7.3364,56.1417,91.6446
+all,WFI-RF,None,XGB,weighted,15,,0.9737,0.9731,0.9731,0.9731,0.9724,0.0002,0.125,28.1665,7.3364,60.0114,95.5143
+all,WFI-RF,rem_1,XGB,micro,14,address,0.9746,0.9735,0.9735,0.9735,0.9735,0.0001,0.1263,28.1665,7.3364,54.622,90.1249
+all,WFI-RF,rem_1,XGB,weighted,14,address,0.9739,0.9735,0.9734,0.9735,0.9727,0.0001,0.1263,28.1665,7.3364,55.2696,90.7725
+all,WFI-RF,rem_2,XGB,micro,13,"pressure_measurement, address",0.9365,0.9343,0.9343,0.9343,0.9343,0.0019,0.5864,28.1665,7.3364,53.9466,89.4495
+all,WFI-RF,rem_2,XGB,weighted,13,"pressure_measurement, address",0.9281,0.9343,0.9311,0.9343,0.9257,0.0019,0.5864,28.1665,7.3364,58.2988,93.8017
+all,WFI-RF,rem_3,XGB,micro,12,"solenoid, pressure_measurement, address",0.9327,0.9327,0.9327,0.9327,0.9327,0.002,0.5949,28.1665,7.3364,53.5156,89.0185
+all,WFI-RF,rem_3,XGB,weighted,12,"solenoid, pressure_measurement, address",0.9238,0.9327,0.9291,0.9327,0.924,0.002,0.5949,28.1665,7.3364,53.5023,89.0052
+all,WFI-RF,rem_4,XGB,micro,11,"solenoid, address, pressure_measurement, control_scheme",0.932,0.9321,0.9321,0.9321,0.9321,0.0018,0.5962,28.1665,7.3364,55.06,90.5629
+all,WFI-RF,rem_4,XGB,weighted,11,"solenoid, address, pressure_measurement, control_scheme",0.9233,0.9321,0.9287,0.9321,0.9232,0.0018,0.5962,28.1665,7.3364,51.8556,87.3585
+all,WFI-RF,rem_5,XGB,micro,10,"pump, control_scheme, solenoid, pressure_measurement, address",0.9276,0.9266,0.9266,0.9266,0.9266,0.0021,0.6224,28.1665,7.3364,51.0363,86.5392
+all,WFI-RF,rem_5,XGB,weighted,10,"pump, control_scheme, solenoid, pressure_measurement, address",0.9176,0.9266,0.9232,0.9266,0.9168,0.0021,0.6224,28.1665,7.3364,56.7804,92.2833
+all,WFI-RF,rem_6,XGB,micro,9,"system_mode, pump, control_scheme, solenoid, pressure_measurement, address",0.9204,0.9217,0.9217,0.9217,0.9217,0.0017,0.6185,28.1665,7.3364,52.2315,87.7344
+all,WFI-RF,rem_6,XGB,weighted,9,"system_mode, pump, control_scheme, solenoid, pressure_measurement, address",0.9083,0.9217,0.9183,0.9217,0.9101,0.0017,0.6185,28.1665,7.3364,50.5891,86.092
+all,WFI-RF,rem_7,XGB,micro,8,"system_mode, pump, control_scheme, solenoid, pressure_measurement, rate, address",0.9109,0.9103,0.9103,0.9103,0.9103,0.0019,0.6243,28.1665,7.3364,56.7201,92.223
+all,WFI-RF,rem_7,XGB,weighted,8,"system_mode, pump, control_scheme, solenoid, pressure_measurement, rate, address",0.8986,0.9103,0.9081,0.9103,0.8978,0.0019,0.6243,28.1665,7.3364,51.3897,86.8926
+all,WFI-RF,rem_8,XGB,micro,7,"system_mode, pump, control_scheme, solenoid, pressure_measurement, rate, gain, address",0.896,0.8957,0.8957,0.8957,0.8957,0.0017,0.6715,28.1665,7.3364,48.6596,84.1625
+all,WFI-RF,rem_8,XGB,weighted,7,"system_mode, pump, control_scheme, solenoid, pressure_measurement, rate, gain, address",0.8804,0.8957,0.8935,0.8957,0.8801,0.0017,0.6715,28.1665,7.3364,47.4788,82.9818
+all,WFI-RF,rem_9,XGB,micro,6,"system_mode, pump, deadband, control_scheme, solenoid, pressure_measurement, rate, gain, address",0.882,0.8815,0.8815,0.8815,0.8815,0.0009,0.7493,28.1665,7.3364,45.9867,81.4896
+all,WFI-RF,rem_9,XGB,weighted,6,"system_mode, pump, deadband, control_scheme, solenoid, pressure_measurement, rate, gain, address",0.8595,0.8815,0.8798,0.8815,0.8588,0.0009,0.7493,28.1665,7.3364,45.1721,80.675
+all,WFI-RF,rem_10,XGB,micro,5,"system_mode, pump, deadband, control_scheme, solenoid, pressure_measurement, rate, gain, length, address",0.8831,0.8827,0.8827,0.8827,0.8827,0.0011,0.7428,28.1665,7.3364,53.3513,88.8543
+all,WFI-RF,rem_10,XGB,weighted,5,"system_mode, pump, deadband, control_scheme, solenoid, pressure_measurement, rate, gain, length, address",0.862,0.8827,0.8807,0.8827,0.8611,0.0011,0.7428,28.1665,7.3364,50.0003,85.5032
+all,WFI-RF,rem_11,XGB,micro,4,"system_mode, pump, deadband, control_scheme, solenoid, cycle_time, pressure_measurement, rate, gain, length, address",0.8674,0.8656,0.8656,0.8656,0.8656,0.001,0.7991,28.1665,7.3364,46.457,81.9599
+all,WFI-RF,rem_11,XGB,weighted,4,"system_mode, pump, deadband, control_scheme, solenoid, cycle_time, pressure_measurement, rate, gain, length, address",0.8386,0.8656,0.8648,0.8656,0.836,0.001,0.7991,28.1665,7.3364,46.2119,81.7148
+all,WFI-RF,rem_12,XGB,micro,3,"system_mode, pump, deadband, control_scheme, solenoid, function, cycle_time, pressure_measurement, rate, gain, length, address",0.8408,0.8421,0.8421,0.8421,0.8421,0.0003,0.8724,28.1665,7.3364,54.8822,90.3851
+all,WFI-RF,rem_12,XGB,weighted,3,"system_mode, pump, deadband, control_scheme, solenoid, function, cycle_time, pressure_measurement, rate, gain, length, address",0.7978,0.8421,0.8311,0.8421,0.799,0.0003,0.8724,28.1665,7.3364,51.2851,86.788
+all,WFI-RF,rem_13,XGB,micro,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, cycle_time, pressure_measurement, rate, gain, length, address",0.8204,0.82,0.82,0.82,0.82,0.0003,0.93,28.1665,7.3364,45.7813,81.2842
+all,WFI-RF,rem_13,XGB,weighted,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, cycle_time, pressure_measurement, rate, gain, length, address",0.7604,0.82,0.7869,0.82,0.7599,0.0003,0.93,28.1665,7.3364,44.8663,80.3692
+all,WFI-RF,rem_14,XGB,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, cycle_time, pressure_measurement, reset_rate, rate, gain, length, address",0.7954,0.7955,0.7955,0.7955,0.7955,0,0.9732,28.1665,7.3364,47.3624,82.8653
+all,WFI-RF,rem_14,XGB,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, cycle_time, pressure_measurement, reset_rate, rate, gain, length, address",0.7148,0.7942,0.6528,0.7942,0.7153,0,0.9607,28.1665,7.3364,46.8033,82.3062
+all,WFI-RF,RFE,RF,micro,14,address,0.9624,0.9618,0.9618,0.9618,0.9618,0.0043,0.2611,28.1665,404.8508,226.6316,659.6489
+all,WFI-RF,RFE,RF,weighted,14,address,0.9614,0.9618,0.9606,0.9618,0.9607,0.0043,0.2611,28.1665,404.8508,222.2565,655.2738
+all,WFI-RF,SPFS,RF,micro,15,,0.9621,0.9614,0.9614,0.9614,0.9614,0.0043,0.2546,28.1665,341.6488,220.5252,590.3405
+all,WFI-RF,SPFS,RF,weighted,15,,0.9612,0.9614,0.9602,0.9614,0.9604,0.0043,0.2546,28.1665,341.6488,218.278,588.0933
+all,WFI-RF,None,RF,micro,15,,0.9621,0.9617,0.9617,0.9617,0.9617,0.0043,0.2579,28.1665,23.6636,216.9796,268.8097
+all,WFI-RF,None,RF,weighted,15,,0.9611,0.9617,0.9605,0.9617,0.9606,0.0043,0.2579,28.1665,23.6636,215.9117,267.7417
+all,WFI-RF,rem_1,RF,micro,14,address,0.9624,0.9618,0.9618,0.9618,0.9618,0.0043,0.2611,28.1665,23.6636,222.0824,273.9125
+all,WFI-RF,rem_1,RF,weighted,14,address,0.9614,0.9618,0.9606,0.9618,0.9607,0.0043,0.2611,28.1665,23.6636,223.2803,275.1104
+all,WFI-RF,rem_2,RF,micro,13,"pressure_measurement, address",0.9628,0.9621,0.9621,0.9621,0.9621,0.0043,0.2539,28.1665,23.6636,198.406,250.2361
+all,WFI-RF,rem_2,RF,weighted,13,"pressure_measurement, address",0.9618,0.9621,0.9609,0.9621,0.9611,0.0043,0.2539,28.1665,23.6636,198.8509,250.681
+all,WFI-RF,rem_3,RF,micro,12,"solenoid, pressure_measurement, address",0.9595,0.9588,0.9588,0.9588,0.9588,0.0044,0.2703,28.1665,23.6636,206.2593,258.0894
+all,WFI-RF,rem_3,RF,weighted,12,"solenoid, pressure_measurement, address",0.9585,0.9588,0.9574,0.9588,0.9576,0.0044,0.2703,28.1665,23.6636,207.8593,259.6893
+all,WFI-RF,rem_4,RF,micro,11,"solenoid, address, pressure_measurement, control_scheme",0.9581,0.9574,0.9574,0.9574,0.9574,0.0043,0.2834,28.1665,23.6636,213.8135,265.6436
+all,WFI-RF,rem_4,RF,weighted,11,"solenoid, address, pressure_measurement, control_scheme",0.957,0.9566,0.9549,0.9566,0.9551,0.0042,0.2978,28.1665,23.6636,211.9905,263.8206
+all,WFI-RF,rem_5,RF,micro,10,"pump, control_scheme, solenoid, pressure_measurement, address",0.9561,0.9548,0.9548,0.9548,0.9548,0.0045,0.2932,28.1665,23.6636,223.3571,275.1872
+all,WFI-RF,rem_5,RF,weighted,10,"pump, control_scheme, solenoid, pressure_measurement, address",0.9546,0.9548,0.953,0.9548,0.9532,0.0045,0.2932,28.1665,23.6636,224.6456,276.4757
+all,WFI-RF,rem_6,RF,micro,9,"system_mode, pump, control_scheme, solenoid, pressure_measurement, address",0.9498,0.9493,0.9493,0.9493,0.9493,0.0047,0.3096,28.1665,23.6636,237.3647,289.1947
+all,WFI-RF,rem_6,RF,weighted,9,"system_mode, pump, control_scheme, solenoid, pressure_measurement, address",0.9479,0.9484,0.9461,0.9484,0.9464,0.0047,0.3253,28.1665,23.6636,234.7604,286.5905
+all,WFI-RF,rem_7,RF,micro,8,"system_mode, pump, control_scheme, solenoid, pressure_measurement, rate, address",0.9453,0.9441,0.9441,0.9441,0.9441,0.0049,0.3226,28.1665,23.6636,191.7316,243.5617
+all,WFI-RF,rem_7,RF,weighted,8,"system_mode, pump, control_scheme, solenoid, pressure_measurement, rate, address",0.9438,0.9441,0.9419,0.9441,0.9421,0.0049,0.3226,28.1665,23.6636,195.1189,246.949
+all,WFI-RF,rem_8,RF,micro,7,"system_mode, pump, control_scheme, solenoid, pressure_measurement, rate, gain, address",0.9324,0.9321,0.9321,0.9321,0.9321,0.0047,0.3874,28.1665,23.6636,202.0066,253.8367
+all,WFI-RF,rem_8,RF,weighted,7,"system_mode, pump, control_scheme, solenoid, pressure_measurement, rate, gain, address",0.9292,0.9321,0.9289,0.9321,0.9288,0.0047,0.3874,28.1665,23.6636,203.1551,254.9852
+all,WFI-RF,rem_9,RF,micro,6,"system_mode, pump, deadband, control_scheme, solenoid, pressure_measurement, rate, gain, address",0.9198,0.9198,0.9198,0.9198,0.9198,0.0046,0.4352,28.1665,23.6636,191.834,243.664
+all,WFI-RF,rem_9,RF,weighted,6,"system_mode, pump, deadband, control_scheme, solenoid, pressure_measurement, rate, gain, address",0.9149,0.9198,0.9155,0.9198,0.915,0.0046,0.4352,28.1665,23.6636,192.6771,244.5072
+all,WFI-RF,rem_10,RF,micro,5,"system_mode, pump, deadband, control_scheme, solenoid, pressure_measurement, rate, gain, length, address",0.918,0.9182,0.9182,0.9182,0.9182,0.0051,0.4503,28.1665,23.6636,208.8816,260.7117
+all,WFI-RF,rem_10,RF,weighted,5,"system_mode, pump, deadband, control_scheme, solenoid, pressure_measurement, rate, gain, length, address",0.9127,0.9182,0.9134,0.9182,0.9129,0.0051,0.4503,28.1665,23.6636,208.8889,260.719
+all,WFI-RF,rem_11,RF,micro,4,"system_mode, pump, deadband, control_scheme, solenoid, cycle_time, pressure_measurement, rate, gain, length, address",0.9048,0.9039,0.9039,0.9039,0.9039,0.0051,0.5321,28.1665,23.6636,216.8949,268.725
+all,WFI-RF,rem_11,RF,weighted,4,"system_mode, pump, deadband, control_scheme, solenoid, cycle_time, pressure_measurement, rate, gain, length, address",0.8975,0.9039,0.897,0.9039,0.8964,0.0051,0.5321,28.1665,23.6636,215.8312,267.6613
+all,WFI-RF,rem_12,RF,micro,3,"system_mode, pump, deadband, control_scheme, solenoid, function, cycle_time, pressure_measurement, rate, gain, length, address",0.8855,0.885,0.885,0.885,0.885,0.0044,0.5033,28.1665,23.6636,184.7289,236.559
+all,WFI-RF,rem_12,RF,weighted,3,"system_mode, pump, deadband, control_scheme, solenoid, function, cycle_time, pressure_measurement, rate, gain, length, address",0.8758,0.8857,0.8751,0.8857,0.876,0.0042,0.5007,28.1665,23.6636,182.7389,234.569
+all,WFI-RF,rem_13,RF,micro,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, cycle_time, pressure_measurement, rate, gain, length, address",0.8495,0.8481,0.8481,0.8481,0.8481,0.0075,0.5569,28.1665,23.6636,200.846,252.6761
+all,WFI-RF,rem_13,RF,weighted,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, cycle_time, pressure_measurement, rate, gain, length, address",0.8347,0.8481,0.8293,0.8481,0.8324,0.0075,0.5569,28.1665,23.6636,199.6825,251.5126
+all,WFI-RF,rem_14,RF,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, cycle_time, pressure_measurement, reset_rate, rate, gain, length, address",0.8019,0.8012,0.8012,0.8012,0.8012,0,0.983,28.1665,23.6636,69.5501,121.3802
+all,WFI-RF,rem_14,RF,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, cycle_time, pressure_measurement, reset_rate, rate, gain, length, address",0.7214,0.8012,0.6586,0.8012,0.7211,0,0.983,28.1665,23.6636,70.1062,121.9363
+all,SP,RFE,XGB,micro,14,length,0.9744,0.9729,0.9729,0.9729,0.9729,0.0002,0.1237,0.5398,103.6918,57.0397,161.2713
+all,SP,RFE,XGB,weighted,14,length,0.9737,0.9729,0.9728,0.9729,0.9721,0.0002,0.1224,0.5398,103.6918,55.5296,159.7612
+all,SP,SPFS,XGB,micro,15,,0.9744,0.9731,0.9731,0.9731,0.9731,0.0002,0.125,0.5398,104.1627,58.4338,163.1363
+all,SP,SPFS,XGB,weighted,15,,0.9737,0.9731,0.9731,0.9731,0.9724,0.0002,0.125,0.5398,104.1627,55.8374,160.5399
+all,SP,None,XGB,micro,15,,0.9744,0.9731,0.9731,0.9731,0.9731,0.0002,0.125,0.5398,9.7235,73.2484,83.5117
+all,SP,None,XGB,weighted,15,,0.9737,0.9731,0.9731,0.9731,0.9724,0.0002,0.125,0.5398,9.7235,67.3089,77.5723
+all,SP,rem_1,XGB,micro,14,control_scheme,0.9744,0.9726,0.9726,0.9726,0.9726,0.0002,0.1257,0.5398,9.7235,60.3108,70.5741
+all,SP,rem_1,XGB,weighted,14,control_scheme,0.9737,0.9726,0.9725,0.9726,0.9718,0.0002,0.1257,0.5398,9.7235,56.1641,66.4274
+all,SP,rem_2,XGB,micro,13,"solenoid, control_scheme",0.9733,0.9707,0.9707,0.9707,0.9707,0.0002,0.125,0.5398,9.7235,53.381,63.6443
+all,SP,rem_2,XGB,weighted,13,"solenoid, control_scheme",0.9726,0.9707,0.9705,0.9707,0.9697,0.0002,0.125,0.5398,9.7235,63.5611,73.8244
+all,SP,rem_3,XGB,micro,12,"pump, solenoid, control_scheme",0.9684,0.9672,0.9672,0.9672,0.9672,0.0002,0.1361,0.5398,9.7235,59.2953,69.5586
+all,SP,rem_3,XGB,weighted,12,"pump, solenoid, control_scheme",0.9672,0.9672,0.967,0.9672,0.9659,0.0002,0.1361,0.5398,9.7235,54.6473,64.9106
+all,SP,rem_4,XGB,micro,11,"pump, solenoid, length, control_scheme",0.9693,0.9671,0.9671,0.9671,0.9671,0.0003,0.125,0.5398,9.7235,52.7595,63.0228
+all,SP,rem_4,XGB,weighted,11,"pump, solenoid, length, control_scheme",0.9682,0.9671,0.9669,0.9671,0.9658,0.0003,0.125,0.5398,9.7235,52.3542,62.6175
+all,SP,rem_5,XGB,micro,10,"system_mode, pump, control_scheme, solenoid, length",0.963,0.9619,0.9619,0.9619,0.9619,0.0003,0.1309,0.5398,9.7235,69.7961,80.0594
+all,SP,rem_5,XGB,weighted,10,"system_mode, pump, control_scheme, solenoid, length",0.9608,0.9619,0.9615,0.9619,0.9596,0.0003,0.1309,0.5398,9.7235,62.8392,73.1025
+all,SP,rem_6,XGB,micro,9,"system_mode, pump, deadband, control_scheme, solenoid, length",0.9565,0.9548,0.9548,0.9548,0.9548,0.0002,0.1401,0.5398,9.7235,57.1208,67.3841
+all,SP,rem_6,XGB,weighted,9,"system_mode, pump, deadband, control_scheme, solenoid, length",0.9538,0.9548,0.9544,0.9548,0.9518,0.0002,0.1401,0.5398,9.7235,53.8096,64.0729
+all,SP,rem_7,XGB,micro,8,"system_mode, pump, deadband, control_scheme, solenoid, gain, length",0.9417,0.9398,0.9398,0.9398,0.9398,0.0001,0.1616,0.5398,9.7235,48.4909,58.7542
+all,SP,rem_7,XGB,weighted,8,"system_mode, pump, deadband, control_scheme, solenoid, gain, length",0.9372,0.9398,0.9405,0.9398,0.9349,0.0001,0.1616,0.5398,9.7235,56.7268,66.9901
+all,SP,rem_8,XGB,micro,7,"system_mode, pump, deadband, control_scheme, solenoid, function, gain, length",0.8877,0.8871,0.8871,0.8871,0.8871,0.0042,0.3946,0.5398,9.7235,55.0001,65.2635
+all,SP,rem_8,XGB,weighted,7,"system_mode, pump, deadband, control_scheme, solenoid, function, gain, length",0.8757,0.8871,0.8791,0.8871,0.8746,0.0042,0.3946,0.5398,9.7235,52.9088,63.1721
+all,SP,rem_9,XGB,micro,6,"system_mode, pump, deadband, control_scheme, solenoid, function, cycle_time, gain, length",0.8777,0.8776,0.8776,0.8776,0.8776,0.004,0.3894,0.5398,9.7235,50.3023,60.5656
+all,SP,rem_9,XGB,weighted,6,"system_mode, pump, deadband, control_scheme, solenoid, function, cycle_time, gain, length",0.8621,0.8776,0.8697,0.8776,0.8625,0.004,0.3894,0.5398,9.7235,52.8954,63.1587
+all,SP,rem_10,XGB,micro,5,"system_mode, pump, deadband, control_scheme, solenoid, function, cycle_time, rate, gain, length",0.8748,0.8747,0.8747,0.8747,0.8747,0.0033,0.3914,0.5398,9.7235,52.8612,63.1245
+all,SP,rem_10,XGB,weighted,5,"system_mode, pump, deadband, control_scheme, solenoid, function, cycle_time, rate, gain, length",0.8582,0.8729,0.8648,0.8729,0.8554,0.0036,0.3874,0.5398,9.7235,50.432,60.6953
+all,SP,rem_11,XGB,micro,4,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, cycle_time, rate, gain, length",0.8534,0.852,0.852,0.852,0.852,0.0044,0.4274,0.5398,9.7235,47.499,57.7623
+all,SP,rem_11,XGB,weighted,4,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, cycle_time, rate, gain, length",0.8272,0.852,0.8397,0.852,0.8257,0.0044,0.4274,0.5398,9.7235,47.5882,57.8515
+all,SP,rem_12,XGB,micro,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, rate, gain, length",0.7848,0.786,0.786,0.786,0.786,0.0002,0.9234,0.5398,9.7235,46.2971,56.5605
+all,SP,rem_12,XGB,weighted,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, rate, gain, length",0.7089,0.786,0.695,0.786,0.7107,0.0002,0.9234,0.5398,9.7235,46.6887,56.952
+all,SP,rem_13,XGB,micro,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, reset_rate, rate, gain, length",0.7835,0.7849,0.7849,0.7849,0.7849,0,1,0.5398,9.7235,48.1331,58.3964
+all,SP,rem_13,XGB,weighted,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, reset_rate, rate, gain, length",0.6903,0.7849,0.6273,0.7849,0.692,0,1,0.5398,9.7235,46.4174,56.6807
+all,SP,rem_14,XGB,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, length",0.7836,0.7849,0.7849,0.7849,0.7849,0,1,0.5398,9.7235,28.7305,38.9938
+all,SP,rem_14,XGB,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, length",0.6903,0.7849,0.6273,0.7849,0.692,0,1,0.5398,9.7235,27.8071,38.0704
+all,SP,RFE,RF,micro,14,pressure_measurement,0.963,0.9623,0.9623,0.9623,0.9623,0.0045,0.2467,0.5398,388.1504,191.8283,580.5184
+all,SP,RFE,RF,weighted,14,pressure_measurement,0.9622,0.9623,0.9612,0.9623,0.9613,0.0045,0.2467,0.5398,388.1504,193.2668,581.957
+all,SP,SPFS,RF,micro,15,,0.9626,0.9615,0.9615,0.9615,0.9615,0.0044,0.2559,0.5398,338.4803,214.9426,553.9626
+all,SP,SPFS,RF,weighted,15,,0.9616,0.9615,0.9603,0.9615,0.9605,0.0044,0.2559,0.5398,338.4803,216.6426,555.6626
+all,SP,None,RF,micro,15,,0.9621,0.9617,0.9617,0.9617,0.9617,0.0043,0.2579,0.5398,24.1702,215.05,239.76
+all,SP,None,RF,weighted,15,,0.9611,0.9617,0.9605,0.9617,0.9606,0.0043,0.2579,0.5398,24.1702,212.8829,237.5929
+all,SP,rem_1,RF,micro,14,control_scheme,0.9613,0.96,0.96,0.96,0.96,0.0041,0.2683,0.5398,24.1702,223.3047,248.0147
+all,SP,rem_1,RF,weighted,14,control_scheme,0.9601,0.961,0.9597,0.961,0.9599,0.0043,0.2546,0.5398,24.1702,224.066,248.776
+all,SP,rem_2,RF,micro,13,"solenoid, control_scheme",0.9582,0.9573,0.9573,0.9573,0.9573,0.0043,0.2788,0.5398,24.1702,230.227,254.937
+all,SP,rem_2,RF,weighted,13,"solenoid, control_scheme",0.9573,0.9573,0.9558,0.9573,0.956,0.0043,0.2788,0.5398,24.1702,232.1167,256.8267
+all,SP,rem_3,RF,micro,12,"pump, solenoid, control_scheme",0.9564,0.9544,0.9544,0.9544,0.9544,0.0046,0.2925,0.5398,24.1702,239.3821,264.0921
+all,SP,rem_3,RF,weighted,12,"pump, solenoid, control_scheme",0.9551,0.9544,0.9526,0.9544,0.9528,0.0046,0.2925,0.5398,24.1702,238.7612,263.4712
+all,SP,rem_4,RF,micro,11,"pump, solenoid, length, control_scheme",0.9548,0.9533,0.9533,0.9533,0.9533,0.0045,0.3377,0.5398,24.1702,250.9743,275.6843
+all,SP,rem_4,RF,weighted,11,"pump, solenoid, length, control_scheme",0.953,0.9533,0.951,0.9533,0.9512,0.0045,0.3377,0.5398,24.1702,251.2735,275.9835
+all,SP,rem_5,RF,micro,10,"system_mode, pump, control_scheme, solenoid, length",0.9488,0.9487,0.9487,0.9487,0.9487,0.0043,0.3423,0.5398,24.1702,269.1365,293.8465
+all,SP,rem_5,RF,weighted,10,"system_mode, pump, control_scheme, solenoid, length",0.9463,0.9487,0.946,0.9487,0.9463,0.0043,0.3423,0.5398,24.1702,271.0955,295.8055
+all,SP,rem_6,RF,micro,9,"system_mode, pump, deadband, control_scheme, solenoid, length",0.9383,0.9383,0.9383,0.9383,0.9383,0.0047,0.3901,0.5398,24.1702,254.6673,279.3773
+all,SP,rem_6,RF,weighted,9,"system_mode, pump, deadband, control_scheme, solenoid, length",0.935,0.9383,0.9349,0.9383,0.9351,0.0047,0.3901,0.5398,24.1702,253.089,277.799
+all,SP,rem_7,RF,micro,8,"system_mode, pump, deadband, control_scheme, solenoid, gain, length",0.9236,0.9233,0.9233,0.9233,0.9233,0.0044,0.4653,0.5398,24.1702,211.847,236.557
+all,SP,rem_7,RF,weighted,8,"system_mode, pump, deadband, control_scheme, solenoid, gain, length",0.918,0.9233,0.9192,0.9233,0.9175,0.0044,0.4653,0.5398,24.1702,210.9994,235.7094
+all,SP,rem_8,RF,micro,7,"system_mode, pump, deadband, control_scheme, solenoid, function, gain, length",0.8979,0.8976,0.8976,0.8976,0.8976,0.0036,0.517,0.5398,24.1702,221.9051,246.6151
+all,SP,rem_8,RF,weighted,7,"system_mode, pump, deadband, control_scheme, solenoid, function, gain, length",0.8885,0.8976,0.8885,0.8976,0.8879,0.0036,0.517,0.5398,24.1702,222.8318,247.5418
+all,SP,rem_9,RF,micro,6,"system_mode, pump, deadband, control_scheme, solenoid, function, cycle_time, gain, length",0.8867,0.8844,0.8844,0.8844,0.8844,0.0035,0.591,0.5398,24.1702,218.8254,243.5354
+all,SP,rem_9,RF,weighted,6,"system_mode, pump, deadband, control_scheme, solenoid, function, cycle_time, gain, length",0.8741,0.8844,0.8723,0.8844,0.8711,0.0035,0.591,0.5398,24.1702,219.9098,244.6198
+all,SP,rem_10,RF,micro,5,"system_mode, pump, deadband, control_scheme, solenoid, function, cycle_time, rate, gain, length",0.8817,0.8808,0.8808,0.8808,0.8808,0.004,0.57,0.5398,24.1702,234.9464,259.6565
+all,SP,rem_10,RF,weighted,5,"system_mode, pump, deadband, control_scheme, solenoid, function, cycle_time, rate, gain, length",0.8695,0.8808,0.8685,0.8808,0.8684,0.004,0.57,0.5398,24.1702,236.6167,261.3267
+all,SP,rem_11,RF,micro,4,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, cycle_time, rate, gain, length",0.8495,0.848,0.848,0.848,0.848,0.006,0.6302,0.5398,24.1702,222.5105,247.2205
+all,SP,rem_11,RF,weighted,4,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, cycle_time, rate, gain, length",0.8309,0.848,0.8265,0.848,0.8283,0.006,0.6302,0.5398,24.1702,222.0488,246.7588
+all,SP,rem_12,RF,micro,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, rate, gain, length",0.7815,0.7833,0.7833,0.7833,0.7833,0.0001,0.9679,0.5398,24.1702,104.3669,129.0769
+all,SP,rem_12,RF,weighted,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, rate, gain, length",0.6959,0.7833,0.6778,0.7833,0.6985,0.0001,0.9679,0.5398,24.1702,101.9762,126.6863
+all,SP,rem_13,RF,micro,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, reset_rate, rate, gain, length",0.7833,0.7847,0.7847,0.7847,0.7847,0,0.998,0.5398,24.1702,60.6919,85.4019
+all,SP,rem_13,RF,weighted,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, reset_rate, rate, gain, length",0.6903,0.7847,0.6434,0.7847,0.692,0,0.998,0.5398,24.1702,63.7639,88.474
+all,SP,rem_14,RF,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, length",0.7836,0.7849,0.7849,0.7849,0.7849,0,1,0.5398,24.1702,21.9576,46.6676
+all,SP,rem_14,RF,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, length",0.6903,0.7849,0.6273,0.7849,0.692,0,1,0.5398,24.1702,21.7626,46.4726
+all,WFI-XGB,RFE,XGB,micro,15,,0.9748,0.9745,0.9745,0.9745,0.9745,0.0002,0.1165,8.1783,98.5319,55.3733,162.0835
+all,WFI-XGB,RFE,XGB,weighted,15,,0.9742,0.9745,0.9744,0.9745,0.9738,0.0002,0.1165,8.1783,98.5319,77.4295,184.1397
+all,WFI-XGB,SPFS,XGB,micro,15,,0.9748,0.9745,0.9745,0.9745,0.9745,0.0002,0.1165,8.1783,103.5423,61.2083,172.929
+all,WFI-XGB,SPFS,XGB,weighted,15,,0.9742,0.9745,0.9744,0.9745,0.9738,0.0002,0.1165,8.1783,103.5423,57.1957,168.9164
+all,WFI-XGB,None,XGB,micro,15,,0.9744,0.9731,0.9731,0.9731,0.9731,0.0002,0.125,8.1783,7.2277,71.6919,87.0979
+all,WFI-XGB,None,XGB,weighted,15,,0.9737,0.9731,0.9731,0.9731,0.9724,0.0002,0.125,8.1783,7.2277,65.7008,81.1068
+all,WFI-XGB,rem_1,XGB,micro,14,solenoid,0.9745,0.9719,0.9719,0.9719,0.9719,0.0002,0.1224,8.1783,7.2277,61.0427,76.4487
+all,WFI-XGB,rem_1,XGB,weighted,14,solenoid,0.9738,0.9719,0.9718,0.9719,0.971,0.0002,0.1224,8.1783,7.2277,56.8606,72.2666
+all,WFI-XGB,rem_2,XGB,micro,13,"solenoid, deadband",0.9669,0.965,0.965,0.965,0.965,0.0003,0.1342,8.1783,7.2277,56.9024,72.3084
+all,WFI-XGB,rem_2,XGB,weighted,13,"solenoid, deadband",0.9657,0.965,0.9649,0.965,0.9637,0.0003,0.1342,8.1783,7.2277,52.764,68.17
+all,WFI-XGB,rem_3,XGB,micro,12,"solenoid, deadband, control_scheme",0.9655,0.9641,0.9641,0.9641,0.9641,0.0001,0.1335,8.1783,7.2277,51.6252,67.0312
+all,WFI-XGB,rem_3,XGB,weighted,12,"solenoid, deadband, control_scheme",0.9643,0.9641,0.964,0.9641,0.9627,0.0001,0.1335,8.1783,7.2277,51.7998,67.2057
+all,WFI-XGB,rem_4,XGB,micro,11,"solenoid, deadband, reset_rate, control_scheme",0.9546,0.9514,0.9514,0.9514,0.9514,0.0002,0.1486,8.1783,7.2277,60.9729,76.3789
+all,WFI-XGB,rem_4,XGB,weighted,11,"solenoid, deadband, reset_rate, control_scheme",0.9523,0.9514,0.9519,0.9514,0.9488,0.0002,0.1486,8.1783,7.2277,56.1641,71.5701
+all,WFI-XGB,rem_5,XGB,micro,10,"deadband, setpoint, control_scheme, solenoid, reset_rate",0.9347,0.9304,0.9304,0.9304,0.9304,0,0.1787,8.1783,7.2277,50.9003,66.3063
+all,WFI-XGB,rem_5,XGB,weighted,10,"deadband, setpoint, control_scheme, solenoid, reset_rate",0.93,0.9304,0.9311,0.9304,0.9248,0,0.1787,8.1783,7.2277,50.7896,66.1956
+all,WFI-XGB,rem_6,XGB,micro,9,"system_mode, deadband, setpoint, control_scheme, solenoid, reset_rate",0.923,0.9191,0.9191,0.9191,0.9191,0.0001,0.1931,8.1783,7.2277,47.1635,62.5695
+all,WFI-XGB,rem_6,XGB,weighted,9,"system_mode, deadband, setpoint, control_scheme, solenoid, reset_rate",0.9151,0.9191,0.9204,0.9191,0.91,0.0001,0.1931,8.1783,7.2277,47.517,62.923
+all,WFI-XGB,rem_7,XGB,micro,8,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, reset_rate",0.8939,0.8914,0.8914,0.8914,0.8914,0.0001,0.214,8.1783,7.2277,46.843,62.249
+all,WFI-XGB,rem_7,XGB,weighted,8,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, reset_rate",0.8767,0.8914,0.8935,0.8914,0.8729,0.0001,0.214,8.1783,7.2277,46.1808,61.5868
+all,WFI-XGB,rem_8,XGB,micro,7,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, reset_rate, gain",0.8749,0.8734,0.8734,0.8734,0.8734,0.0002,0.2127,8.1783,7.2277,49.6168,65.0228
+all,WFI-XGB,rem_8,XGB,weighted,7,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, reset_rate, gain",0.8466,0.8734,0.8747,0.8734,0.844,0.0002,0.2127,8.1783,7.2277,46.4764,61.8824
+all,WFI-XGB,rem_9,XGB,micro,6,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, gain",0.83,0.8291,0.8291,0.8291,0.8291,0.0004,0.9719,8.1783,7.2277,44.6675,60.0735
+all,WFI-XGB,rem_9,XGB,weighted,6,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, gain",0.7669,0.8292,0.8104,0.8292,0.7661,0.0005,0.9719,8.1783,7.2277,48.9212,64.3272
+all,WFI-XGB,rem_10,XGB,micro,5,"system_mode, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, gain",0.8268,0.8264,0.8264,0.8264,0.8264,0.0003,0.9784,8.1783,7.2277,47.194,62.5999
+all,WFI-XGB,rem_10,XGB,weighted,5,"system_mode, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, gain",0.7599,0.8265,0.7894,0.8265,0.7594,0.0005,0.9738,8.1783,7.2277,43.5392,58.9452
+all,WFI-XGB,rem_11,XGB,micro,4,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, gain",0.8269,0.8264,0.8264,0.8264,0.8264,0.0004,0.9758,8.1783,7.2277,41.4423,56.8483
+all,WFI-XGB,rem_11,XGB,weighted,4,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, gain",0.7598,0.8263,0.7883,0.8263,0.7591,0.0004,0.9777,8.1783,7.2277,42.7077,58.1136
+all,WFI-XGB,rem_12,XGB,micro,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain",0.8129,0.8136,0.8136,0.8136,0.8136,0,1,8.1783,7.2277,49.8336,65.2396
+all,WFI-XGB,rem_12,XGB,weighted,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain",0.7294,0.8136,0.6635,0.8136,0.7306,0,1,8.1783,7.2277,48.752,64.158
+all,WFI-XGB,rem_13,XGB,micro,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain",0.8053,0.807,0.807,0.807,0.807,0,1,8.1783,7.2277,44.3367,59.7427
+all,WFI-XGB,rem_13,XGB,weighted,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain",0.721,0.807,0.6586,0.807,0.7231,0,1,8.1783,7.2277,40.5419,55.9479
+all,WFI-XGB,rem_14,XGB,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.8034,0.8048,0.8048,0.8048,0.8048,0,1,8.1783,7.2277,37.8282,53.2342
+all,WFI-XGB,rem_14,XGB,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.7182,0.8048,0.6572,0.8048,0.7199,0,1,8.1783,7.2277,37.3,52.706
+all,WFI-XGB,RFE,RF,micro,13,"pressure_measurement, address",0.9622,0.9618,0.9618,0.9618,0.9618,0.0042,0.2565,8.1783,371.0178,196.9263,576.1224
+all,WFI-XGB,RFE,RF,weighted,13,"pressure_measurement, address",0.9612,0.9618,0.9606,0.9618,0.9608,0.0042,0.2565,8.1783,371.0178,196.1758,575.3719
+all,WFI-XGB,SPFS,RF,micro,15,,0.9622,0.9612,0.9612,0.9612,0.9612,0.0041,0.2637,8.1783,214.3641,216.3696,438.9121
+all,WFI-XGB,SPFS,RF,weighted,15,,0.9612,0.9618,0.9605,0.9618,0.9607,0.0042,0.2592,8.1783,214.3641,215.8557,438.3982
+all,WFI-XGB,None,RF,micro,15,,0.9621,0.9617,0.9617,0.9617,0.9617,0.0043,0.2579,8.1783,22.4982,215.966,246.6425
+all,WFI-XGB,None,RF,weighted,15,,0.9611,0.9617,0.9605,0.9617,0.9606,0.0043,0.2579,8.1783,22.4982,215.5306,246.2072
+all,WFI-XGB,rem_1,RF,micro,14,solenoid,0.959,0.9589,0.9589,0.9589,0.9589,0.0045,0.2703,8.1783,22.4982,223.4063,254.0829
+all,WFI-XGB,rem_1,RF,weighted,14,solenoid,0.9579,0.9589,0.9575,0.9589,0.9576,0.0045,0.2703,8.1783,22.4982,223.375,254.0516
+all,WFI-XGB,rem_2,RF,micro,13,"solenoid, deadband",0.9526,0.9517,0.9517,0.9517,0.9517,0.0048,0.2938,8.1783,22.4982,207.2949,237.9715
+all,WFI-XGB,rem_2,RF,weighted,13,"solenoid, deadband",0.9509,0.9517,0.95,0.9517,0.9501,0.0048,0.2938,8.1783,22.4982,208.6028,239.2794
+all,WFI-XGB,rem_3,RF,micro,12,"solenoid, deadband, control_scheme",0.9505,0.9499,0.9499,0.9499,0.9499,0.0045,0.3259,8.1783,22.4982,214.4513,245.1278
+all,WFI-XGB,rem_3,RF,weighted,12,"solenoid, deadband, control_scheme",0.9488,0.9497,0.9477,0.9497,0.9476,0.0045,0.3253,8.1783,22.4982,217.598,248.2746
+all,WFI-XGB,rem_4,RF,micro,11,"solenoid, deadband, reset_rate, control_scheme",0.9398,0.9379,0.9379,0.9379,0.9379,0.0056,0.3691,8.1783,22.4982,227.991,258.6676
+all,WFI-XGB,rem_4,RF,weighted,11,"solenoid, deadband, reset_rate, control_scheme",0.9371,0.9379,0.9349,0.9379,0.935,0.0056,0.3691,8.1783,22.4982,194.7546,225.4312
+all,WFI-XGB,rem_5,RF,micro,10,"deadband, setpoint, control_scheme, solenoid, reset_rate",0.9069,0.9039,0.9039,0.9039,0.9039,0.0081,0.5334,8.1783,22.4982,176.3528,207.0294
+all,WFI-XGB,rem_5,RF,weighted,10,"deadband, setpoint, control_scheme, solenoid, reset_rate",0.9007,0.9039,0.8982,0.9039,0.8976,0.0081,0.5334,8.1783,22.4982,172.7294,203.406
+all,WFI-XGB,rem_6,RF,micro,9,"system_mode, deadband, setpoint, control_scheme, solenoid, reset_rate",0.8941,0.8916,0.8916,0.8916,0.8916,0.0072,0.6139,8.1783,22.4982,175.3519,206.0284
+all,WFI-XGB,rem_6,RF,weighted,9,"system_mode, deadband, setpoint, control_scheme, solenoid, reset_rate",0.8847,0.8916,0.8828,0.8916,0.8815,0.0072,0.6139,8.1783,22.4982,172.8454,203.522
+all,WFI-XGB,rem_7,RF,micro,8,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, reset_rate",0.8582,0.8574,0.8574,0.8574,0.8574,0.0038,0.8226,8.1783,22.4982,126.4491,157.1257
+all,WFI-XGB,rem_7,RF,weighted,8,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, reset_rate",0.8307,0.8574,0.8344,0.8574,0.8301,0.0038,0.8226,8.1783,22.4982,126.5991,157.2756
+all,WFI-XGB,rem_8,RF,micro,7,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, reset_rate, gain",0.8334,0.8329,0.8329,0.8329,0.8329,0.0005,0.962,8.1783,22.4982,114.2919,144.9685
+all,WFI-XGB,rem_8,RF,weighted,7,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, reset_rate, gain",0.7764,0.8329,0.8147,0.8329,0.7762,0.0005,0.962,8.1783,22.4982,117.5742,148.2507
+all,WFI-XGB,rem_9,RF,micro,6,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, gain",0.8315,0.8312,0.8312,0.8312,0.8312,0.0006,0.9594,8.1783,22.4982,81.5407,112.2173
+all,WFI-XGB,rem_9,RF,weighted,6,"system_mode, deadband, setpoint, control_scheme, solenoid, cycle_time, pressure_measurement, reset_rate, gain",0.7728,0.8312,0.8018,0.8312,0.7727,0.0006,0.9594,8.1783,22.4982,82.8946,113.5712
+all,WFI-XGB,rem_10,RF,micro,5,"system_mode, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, gain",0.8267,0.8264,0.8264,0.8264,0.8264,0.0004,0.9745,8.1783,22.4982,39.4699,70.1465
+all,WFI-XGB,rem_10,RF,weighted,5,"system_mode, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, gain",0.76,0.8264,0.7859,0.8264,0.7596,0.0004,0.9745,8.1783,22.4982,37.9052,68.5818
+all,WFI-XGB,rem_11,RF,micro,4,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, gain",0.8265,0.8263,0.8263,0.8263,0.8263,0.0004,0.9719,8.1783,22.4982,34.2725,64.9491
+all,WFI-XGB,rem_11,RF,weighted,4,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, gain",0.7598,0.8263,0.7843,0.8263,0.7595,0.0004,0.9719,8.1783,22.4982,34.451,65.1276
+all,WFI-XGB,rem_12,RF,micro,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain",0.8129,0.8136,0.8136,0.8136,0.8136,0,1,8.1783,22.4982,29.1751,59.8517
+all,WFI-XGB,rem_12,RF,weighted,3,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain",0.7294,0.8136,0.6635,0.8136,0.7306,0,1,8.1783,22.4982,29.0807,59.7573
+all,WFI-XGB,rem_13,RF,micro,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain",0.8053,0.807,0.807,0.807,0.807,0,1,8.1783,22.4982,26.9387,57.6153
+all,WFI-XGB,rem_13,RF,weighted,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain",0.721,0.807,0.6586,0.807,0.7231,0,1,8.1783,22.4982,27.4431,58.1197
+all,WFI-XGB,rem_14,RF,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.8034,0.8048,0.8048,0.8048,0.8048,0,1,8.1783,22.4982,25.0521,55.7287
+all,WFI-XGB,rem_14,RF,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, function, crc_rate, cycle_time, pressure_measurement, reset_rate, rate, gain, address",0.7182,0.8048,0.6572,0.8048,0.7199,0,1,8.1783,22.4982,24.1353,54.8119
+response,WFI-RF,RFE,XGB,micro,10,"rate, crc_rate",0.9706,0.967,0.967,0.967,0.967,0.0009,0.0805,7.9243,13.1196,13.4267,34.4706
+response,WFI-RF,RFE,XGB,weighted,10,"rate, crc_rate",0.9702,0.967,0.9667,0.967,0.9665,0.0009,0.0805,7.9243,13.1196,10.9564,32.0003
+response,WFI-RF,SPFS,XGB,micro,12,,0.9682,0.9669,0.9669,0.9669,0.9669,0.0006,0.0863,7.9243,13.6411,12.4047,33.9701
+response,WFI-RF,SPFS,XGB,weighted,12,,0.9678,0.9669,0.9667,0.9669,0.9664,0.0006,0.0863,7.9243,13.6411,11.0601,32.6255
+response,WFI-RF,None,XGB,micro,12,,0.9679,0.9662,0.9662,0.9662,0.9662,0.0006,0.0875,7.9243,1.4842,10.6278,20.0363
+response,WFI-RF,None,XGB,weighted,12,,0.9672,0.9662,0.966,0.9662,0.9656,0.0006,0.0875,7.9243,1.4842,11.3959,20.8044
+response,WFI-RF,rem_1,XGB,micro,11,rate,0.9671,0.9633,0.9633,0.9633,0.9633,0.0011,0.085,7.9243,1.4842,10.4126,19.8211
+response,WFI-RF,rem_1,XGB,weighted,11,rate,0.9666,0.9633,0.9629,0.9633,0.9626,0.0011,0.085,7.9243,1.4842,10.1511,19.5596
+response,WFI-RF,rem_2,XGB,micro,10,"rate, control_scheme",0.9675,0.9649,0.9649,0.9649,0.9649,0.0009,0.0875,7.9243,1.4842,10.438,19.8465
+response,WFI-RF,rem_2,XGB,weighted,10,"rate, control_scheme",0.9669,0.9649,0.9647,0.9649,0.9643,0.0009,0.0875,7.9243,1.4842,9.6352,19.0437
+response,WFI-RF,rem_3,XGB,micro,9,"rate, pump, control_scheme",0.9673,0.9628,0.9628,0.9628,0.9628,0.001,0.085,7.9243,1.4842,9.7641,19.1727
+response,WFI-RF,rem_3,XGB,weighted,9,"rate, pump, control_scheme",0.9668,0.9628,0.9625,0.9628,0.9622,0.001,0.085,7.9243,1.4842,9.9951,19.4037
+response,WFI-RF,rem_4,XGB,micro,8,"rate, pump, solenoid, control_scheme",0.9664,0.9623,0.9623,0.9623,0.9623,0.001,0.0863,7.9243,1.4842,9.1401,18.5487
+response,WFI-RF,rem_4,XGB,weighted,8,"rate, pump, solenoid, control_scheme",0.9659,0.9623,0.9619,0.9623,0.9616,0.001,0.0863,7.9243,1.4842,9.1463,18.5549
+response,WFI-RF,rem_5,XGB,micro,7,"system_mode, pump, control_scheme, solenoid, rate",0.964,0.9595,0.9595,0.9595,0.9595,0.0012,0.0971,7.9243,1.4842,9.2706,18.6792
+response,WFI-RF,rem_5,XGB,weighted,7,"system_mode, pump, control_scheme, solenoid, rate",0.9636,0.9595,0.9592,0.9595,0.9588,0.0012,0.0971,7.9243,1.4842,8.7967,18.2053
+response,WFI-RF,rem_6,XGB,micro,6,"system_mode, pump, control_scheme, solenoid, rate, gain",0.9599,0.9556,0.9556,0.9556,0.9556,0.001,0.1067,7.9243,1.4842,8.4785,17.8871
+response,WFI-RF,rem_6,XGB,weighted,6,"system_mode, pump, control_scheme, solenoid, rate, gain",0.9591,0.9556,0.955,0.9556,0.9546,0.001,0.1067,7.9243,1.4842,8.4844,17.893
+response,WFI-RF,rem_7,XGB,micro,5,"system_mode, pump, control_scheme, solenoid, cycle_time, rate, gain",0.9548,0.9512,0.9512,0.9512,0.9512,0.0016,0.1093,7.9243,1.4842,8.3119,17.7205
+response,WFI-RF,rem_7,XGB,weighted,5,"system_mode, pump, control_scheme, solenoid, cycle_time, rate, gain",0.9537,0.9512,0.9505,0.9512,0.9501,0.0016,0.1093,7.9243,1.4842,7.7014,17.11
+response,WFI-RF,rem_8,XGB,micro,4,"system_mode, pump, control_scheme, solenoid, crc_rate, cycle_time, rate, gain",0.9579,0.9562,0.9562,0.9562,0.9562,0.0012,0.1035,7.9243,1.4842,7.1319,16.5405
+response,WFI-RF,rem_8,XGB,weighted,4,"system_mode, pump, control_scheme, solenoid, crc_rate, cycle_time, rate, gain",0.9568,0.9562,0.9558,0.9562,0.9552,0.0012,0.1035,7.9243,1.4842,7.1319,16.5404
+response,WFI-RF,rem_9,XGB,micro,3,"system_mode, pump, deadband, control_scheme, solenoid, crc_rate, cycle_time, rate, gain",0.9517,0.9485,0.9485,0.9485,0.9485,0.0008,0.1169,7.9243,1.4842,7.6835,17.0921
+response,WFI-RF,rem_9,XGB,weighted,3,"system_mode, pump, deadband, control_scheme, solenoid, crc_rate, cycle_time, rate, gain",0.9504,0.9485,0.9475,0.9485,0.9471,0.0008,0.1169,7.9243,1.4842,6.9002,16.3088
+response,WFI-RF,rem_10,XGB,micro,2,"system_mode, pump, deadband, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.9168,0.9168,0.9168,0.9168,0.9168,0.001,0.145,7.9243,1.4842,6.4126,15.8211
+response,WFI-RF,rem_10,XGB,weighted,2,"system_mode, pump, deadband, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.9132,0.9148,0.9111,0.9148,0.9115,0.0016,0.1431,7.9243,1.4842,6.494,15.9026
+response,WFI-RF,rem_11,XGB,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.8536,0.8487,0.8487,0.8487,0.8487,0,0.2351,7.9243,1.4842,5.8839,15.2924
+response,WFI-RF,rem_11,XGB,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.8415,0.8487,0.8418,0.8487,0.8353,0,0.2351,7.9243,1.4842,6.857,16.2655
+response,WFI-RF,RFE,RF,micro,11,crc_rate,0.9817,0.9806,0.9806,0.9806,0.9806,0.0016,0.0358,7.9243,85.5844,51.7054,145.2141
+response,WFI-RF,RFE,RF,weighted,11,crc_rate,0.9815,0.9806,0.9805,0.9806,0.9805,0.0016,0.0358,7.9243,85.5844,50.667,144.1757
+response,WFI-RF,SPFS,RF,micro,12,,0.9768,0.9768,0.9768,0.9768,0.9768,0.001,0.0633,7.9243,79.5022,63.2458,150.6723
+response,WFI-RF,SPFS,RF,weighted,12,,0.9765,0.9768,0.9767,0.9768,0.9765,0.001,0.0633,7.9243,79.5022,62.6668,150.0934
+response,WFI-RF,None,RF,micro,12,,0.9769,0.9766,0.9766,0.9766,0.9766,0.001,0.0633,7.9243,7.0032,61.4841,76.4117
+response,WFI-RF,None,RF,weighted,12,,0.9767,0.9766,0.9766,0.9766,0.9763,0.001,0.0633,7.9243,7.0032,60.7774,75.705
+response,WFI-RF,rem_1,RF,micro,11,rate,0.9779,0.9748,0.9748,0.9748,0.9748,0.0009,0.0696,7.9243,7.0032,65.1206,80.0482
+response,WFI-RF,rem_1,RF,weighted,11,rate,0.9776,0.9748,0.9747,0.9748,0.9745,0.0009,0.0696,7.9243,7.0032,64.0405,78.968
+response,WFI-RF,rem_2,RF,micro,10,"rate, control_scheme",0.9771,0.9749,0.9749,0.9749,0.9749,0.001,0.0677,7.9243,7.0032,66.3146,81.2421
+response,WFI-RF,rem_2,RF,weighted,10,"rate, control_scheme",0.9769,0.9749,0.9748,0.9749,0.9746,0.001,0.0677,7.9243,7.0032,67.4525,82.3801
+response,WFI-RF,rem_3,RF,micro,9,"rate, pump, control_scheme",0.9766,0.9741,0.9741,0.9741,0.9741,0.0009,0.0645,7.9243,7.0032,71.971,86.8986
+response,WFI-RF,rem_3,RF,weighted,9,"rate, pump, control_scheme",0.9763,0.9741,0.974,0.9741,0.9738,0.0009,0.0645,7.9243,7.0032,71.9843,86.9118
+response,WFI-RF,rem_4,RF,micro,8,"rate, pump, solenoid, control_scheme",0.9739,0.9718,0.9718,0.9718,0.9718,0.0009,0.0735,7.9243,7.0032,57.2845,72.212
+response,WFI-RF,rem_4,RF,weighted,8,"rate, pump, solenoid, control_scheme",0.9735,0.9718,0.9717,0.9718,0.9714,0.0009,0.0735,7.9243,7.0032,57.8673,72.7948
+response,WFI-RF,rem_5,RF,micro,7,"system_mode, pump, control_scheme, solenoid, rate",0.9726,0.9696,0.9696,0.9696,0.9696,0.001,0.0741,7.9243,7.0032,64.9747,79.9022
+response,WFI-RF,rem_5,RF,weighted,7,"system_mode, pump, control_scheme, solenoid, rate",0.9722,0.9696,0.9694,0.9696,0.9691,0.001,0.0741,7.9243,7.0032,62.4916,77.4191
+response,WFI-RF,rem_6,RF,micro,6,"system_mode, pump, control_scheme, solenoid, rate, gain",0.9704,0.9672,0.9672,0.9672,0.9672,0.0017,0.078,7.9243,7.0032,68.4505,83.3781
+response,WFI-RF,rem_6,RF,weighted,6,"system_mode, pump, control_scheme, solenoid, rate, gain",0.97,0.9672,0.9668,0.9672,0.9667,0.0017,0.078,7.9243,7.0032,68.5019,83.4295
+response,WFI-RF,rem_7,RF,micro,5,"system_mode, pump, control_scheme, solenoid, cycle_time, rate, gain",0.9662,0.9643,0.9643,0.9643,0.9643,0.0015,0.0863,7.9243,7.0032,74.4042,89.3318
+response,WFI-RF,rem_7,RF,weighted,5,"system_mode, pump, control_scheme, solenoid, cycle_time, rate, gain",0.9656,0.9643,0.9637,0.9643,0.9637,0.0015,0.0863,7.9243,7.0032,72.6869,87.6145
+response,WFI-RF,rem_8,RF,micro,4,"system_mode, pump, control_scheme, solenoid, crc_rate, cycle_time, rate, gain",0.9711,0.971,0.971,0.971,0.971,0.0016,0.0594,7.9243,7.0032,63.7398,78.6674
+response,WFI-RF,rem_8,RF,weighted,4,"system_mode, pump, control_scheme, solenoid, crc_rate, cycle_time, rate, gain",0.9709,0.971,0.9706,0.971,0.9707,0.0016,0.0594,7.9243,7.0032,63.0551,77.9826
+response,WFI-RF,rem_9,RF,micro,3,"system_mode, pump, deadband, control_scheme, solenoid, crc_rate, cycle_time, rate, gain",0.9666,0.9642,0.9642,0.9642,0.9642,0.0031,0.0652,7.9243,7.0032,43.9332,58.8607
+response,WFI-RF,rem_9,RF,weighted,3,"system_mode, pump, deadband, control_scheme, solenoid, crc_rate, cycle_time, rate, gain",0.9663,0.9638,0.9632,0.9638,0.9634,0.0028,0.0613,7.9243,7.0032,43.3588,58.2863
+response,WFI-RF,rem_10,RF,micro,2,"system_mode, pump, deadband, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.939,0.9371,0.9371,0.9371,0.9371,0.0051,0.0843,7.9243,7.0032,46.3844,61.312
+response,WFI-RF,rem_10,RF,weighted,2,"system_mode, pump, deadband, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.9385,0.9371,0.9367,0.9371,0.9367,0.0051,0.0843,7.9243,7.0032,46.4859,61.4135
+response,WFI-RF,rem_11,RF,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.893,0.8893,0.8893,0.8893,0.8893,0.0023,0.1003,7.9243,7.0032,51.1217,66.0493
+response,WFI-RF,rem_11,RF,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.8899,0.8893,0.8975,0.8893,0.8855,0.0023,0.1003,7.9243,7.0032,50.7299,65.6574
+response,SP,RFE,XGB,micro,10,"system_mode, crc_rate",0.967,0.9646,0.9646,0.9646,0.9646,0.0006,0.0895,0.0903,11.1759,8.1213,19.3875
+response,SP,RFE,XGB,weighted,10,"system_mode, crc_rate",0.9664,0.9646,0.9644,0.9646,0.9639,0.0006,0.0895,0.0903,11.1759,8.4821,19.7484
+response,SP,SPFS,XGB,micro,12,,0.9675,0.9652,0.9652,0.9652,0.9652,0.0007,0.0843,0.0903,9.8754,9.9252,19.8909
+response,SP,SPFS,XGB,weighted,12,,0.967,0.9652,0.965,0.9652,0.9647,0.0007,0.0843,0.0903,9.8754,11.7137,21.6794
+response,SP,None,XGB,micro,12,,0.9679,0.9662,0.9662,0.9662,0.9662,0.0006,0.0875,0.0903,1.2529,9.9475,11.2908
+response,SP,None,XGB,weighted,12,,0.9672,0.9662,0.966,0.9662,0.9656,0.0006,0.0875,0.0903,1.2529,10.1651,11.5083
+response,SP,rem_1,XGB,micro,11,gain,0.9668,0.9623,0.9623,0.9623,0.9623,0.0009,0.0914,0.0903,1.2529,10.5921,11.9354
+response,SP,rem_1,XGB,weighted,11,gain,0.9662,0.9623,0.962,0.9623,0.9616,0.0009,0.0914,0.0903,1.2529,9.7353,11.0785
+response,SP,rem_2,XGB,micro,10,"gain, pressure_measurement",0.8272,0.8168,0.8168,0.8168,0.8168,0.0099,0.5476,0.0903,1.2529,8.9883,10.3315
+response,SP,rem_2,XGB,weighted,10,"gain, pressure_measurement",0.8093,0.8168,0.8172,0.8168,0.7975,0.0099,0.5476,0.0903,1.2529,9.0179,10.3611
+response,SP,rem_3,XGB,micro,9,"gain, crc_rate, pressure_measurement",0.8246,0.8199,0.8199,0.8199,0.8199,0.0106,0.5144,0.0903,1.2529,8.7461,10.0893
+response,SP,rem_3,XGB,weighted,9,"gain, crc_rate, pressure_measurement",0.8075,0.8199,0.8197,0.8199,0.8032,0.0106,0.5144,0.0903,1.2529,8.2938,9.6371
+response,SP,rem_4,XGB,micro,8,"crc_rate, gain, setpoint, pressure_measurement",0.7994,0.7998,0.7998,0.7998,0.7998,0.0109,0.5712,0.0903,1.2529,7.5798,8.9231
+response,SP,rem_4,XGB,weighted,8,"crc_rate, gain, setpoint, pressure_measurement",0.7756,0.7998,0.7996,0.7998,0.7757,0.0109,0.5712,0.0903,1.2529,7.8799,9.2232
+response,SP,rem_5,XGB,micro,7,"system_mode, setpoint, crc_rate, pressure_measurement, gain",0.791,0.7918,0.7918,0.7918,0.7918,0.0133,0.5827,0.0903,1.2529,7.4851,8.8283
+response,SP,rem_5,XGB,weighted,7,"system_mode, setpoint, crc_rate, pressure_measurement, gain",0.7628,0.7918,0.7921,0.7918,0.7639,0.0133,0.5827,0.0903,1.2529,7.0868,8.43
+response,SP,rem_6,XGB,micro,6,"system_mode, setpoint, solenoid, crc_rate, pressure_measurement, gain",0.7847,0.7826,0.7826,0.7826,0.7826,0.014,0.6077,0.0903,1.2529,6.9409,8.2842
+response,SP,rem_6,XGB,weighted,6,"system_mode, setpoint, solenoid, crc_rate, pressure_measurement, gain",0.7548,0.7826,0.7808,0.7826,0.7519,0.014,0.6077,0.0903,1.2529,6.877,8.2203
+response,SP,rem_7,XGB,micro,5,"system_mode, setpoint, control_scheme, solenoid, crc_rate, pressure_measurement, gain",0.7821,0.7776,0.7776,0.7776,0.7776,0.0123,0.6403,0.0903,1.2529,7.1668,8.51
+response,SP,rem_7,XGB,weighted,5,"system_mode, setpoint, control_scheme, solenoid, crc_rate, pressure_measurement, gain",0.7504,0.7824,0.7815,0.7824,0.7507,0.0112,0.6141,0.0903,1.2529,6.8366,8.1799
+response,SP,rem_8,XGB,micro,4,"system_mode, pump, setpoint, control_scheme, solenoid, crc_rate, pressure_measurement, gain",0.7768,0.7755,0.7755,0.7755,0.7755,0.0113,0.6435,0.0903,1.2529,6.4402,7.7834
+response,SP,rem_8,XGB,weighted,4,"system_mode, pump, setpoint, control_scheme, solenoid, crc_rate, pressure_measurement, gain",0.7424,0.7735,0.7729,0.7735,0.7376,0.0115,0.669,0.0903,1.2529,6.7073,8.0506
+response,SP,rem_9,XGB,micro,3,"system_mode, pump, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, gain",0.7562,0.7558,0.7558,0.7558,0.7558,0.0105,0.7304,0.0903,1.2529,6.2727,7.616
+response,SP,rem_9,XGB,weighted,3,"system_mode, pump, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, gain",0.7082,0.7555,0.7587,0.7555,0.7067,0.0097,0.7425,0.0903,1.2529,6.6491,7.9923
+response,SP,rem_10,XGB,micro,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, gain",0.7071,0.7062,0.7062,0.7062,0.7062,0.0012,0.9591,0.0903,1.2529,5.7131,7.0563
+response,SP,rem_10,XGB,weighted,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, gain",0.6021,0.7062,0.705,0.7062,0.5999,0.0012,0.9591,0.0903,1.2529,5.7524,7.0956
+response,SP,rem_11,XGB,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, rate, gain",0.6999,0.6988,0.6988,0.6988,0.6988,0,0.9955,0.0903,1.2529,5.5978,6.941
+response,SP,rem_11,XGB,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, rate, gain",0.5825,0.6991,0.5917,0.6991,0.5817,0,0.9923,0.0903,1.2529,5.568,6.9112
+response,SP,RFE,RF,micro,11,crc_rate,0.9817,0.9798,0.9798,0.9798,0.9798,0.0017,0.0377,0.0903,78.2,51.8731,130.1634
+response,SP,RFE,RF,weighted,11,crc_rate,0.9815,0.9798,0.9797,0.9798,0.9797,0.0017,0.0377,0.0903,78.2,51.9517,130.242
+response,SP,SPFS,RF,micro,12,,0.9757,0.9741,0.9741,0.9741,0.9741,0.0008,0.0671,0.0903,55.5634,60.9951,116.6488
+response,SP,SPFS,RF,weighted,12,,0.9754,0.9741,0.974,0.9741,0.9737,0.0008,0.0671,0.0903,55.5634,63.9931,119.6469
+response,SP,None,RF,micro,12,,0.9769,0.9766,0.9766,0.9766,0.9766,0.001,0.0633,0.0903,6.7055,62.5259,69.3217
+response,SP,None,RF,weighted,12,,0.9767,0.9766,0.9766,0.9766,0.9763,0.001,0.0633,0.0903,6.7055,61.9791,68.7749
+response,SP,rem_1,RF,micro,11,gain,0.9748,0.9747,0.9747,0.9747,0.9747,0.0006,0.069,0.0903,6.7055,61.8515,68.6473
+response,SP,rem_1,RF,weighted,11,gain,0.9744,0.9747,0.9746,0.9747,0.9743,0.0006,0.069,0.0903,6.7055,64.2612,71.057
+response,SP,rem_2,RF,micro,10,"gain, pressure_measurement",0.8898,0.8789,0.8789,0.8789,0.8789,0.0193,0.2812,0.0903,6.7055,65.6684,72.4642
+response,SP,rem_2,RF,weighted,10,"gain, pressure_measurement",0.8877,0.8789,0.8757,0.8789,0.8756,0.0193,0.2812,0.0903,6.7055,62.3389,69.1347
+response,SP,rem_3,RF,micro,9,"gain, crc_rate, pressure_measurement",0.858,0.8614,0.8614,0.8614,0.8614,0.0235,0.2837,0.0903,6.7055,39.8042,46.6
+response,SP,rem_3,RF,weighted,9,"gain, crc_rate, pressure_measurement",0.8547,0.8621,0.859,0.8621,0.8598,0.0276,0.2722,0.0903,6.7055,40.3206,47.1164
+response,SP,rem_4,RF,micro,8,"crc_rate, gain, setpoint, pressure_measurement",0.8337,0.8378,0.8378,0.8378,0.8378,0.0274,0.331,0.0903,6.7055,28.7542,35.55
+response,SP,rem_4,RF,weighted,8,"crc_rate, gain, setpoint, pressure_measurement",0.8279,0.8378,0.8325,0.8378,0.8333,0.0274,0.331,0.0903,6.7055,28.4237,35.2195
+response,SP,rem_5,RF,micro,7,"system_mode, setpoint, crc_rate, pressure_measurement, gain",0.8259,0.8317,0.8317,0.8317,0.8317,0.0271,0.3495,0.0903,6.7055,29.3245,36.1203
+response,SP,rem_5,RF,weighted,7,"system_mode, setpoint, crc_rate, pressure_measurement, gain",0.8187,0.8317,0.8254,0.8317,0.8258,0.0271,0.3495,0.0903,6.7055,29.8243,36.6201
+response,SP,rem_6,RF,micro,6,"system_mode, setpoint, solenoid, crc_rate, pressure_measurement, gain",0.8192,0.8203,0.8203,0.8203,0.8203,0.0273,0.3783,0.0903,6.7055,30.8413,37.6371
+response,SP,rem_6,RF,weighted,6,"system_mode, setpoint, solenoid, crc_rate, pressure_measurement, gain",0.8104,0.8203,0.8128,0.8203,0.8124,0.0273,0.3783,0.0903,6.7055,31.4412,38.237
+response,SP,rem_7,RF,micro,5,"system_mode, setpoint, control_scheme, solenoid, crc_rate, pressure_measurement, gain",0.8099,0.8116,0.8116,0.8116,0.8116,0.0252,0.407,0.0903,6.7055,33.1469,39.9427
+response,SP,rem_7,RF,weighted,5,"system_mode, setpoint, control_scheme, solenoid, crc_rate, pressure_measurement, gain",0.7987,0.8116,0.803,0.8116,0.8019,0.0252,0.407,0.0903,6.7055,34.1153,40.9111
+response,SP,rem_8,RF,micro,4,"system_mode, pump, setpoint, control_scheme, solenoid, crc_rate, pressure_measurement, gain",0.8008,0.8001,0.8001,0.8001,0.8001,0.0286,0.4466,0.0903,6.7055,35.6885,42.4843
+response,SP,rem_8,RF,weighted,4,"system_mode, pump, setpoint, control_scheme, solenoid, crc_rate, pressure_measurement, gain",0.7886,0.8001,0.7899,0.8001,0.7885,0.0286,0.4466,0.0903,6.7055,35.2496,42.0454
+response,SP,rem_9,RF,micro,3,"system_mode, pump, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, gain",0.7843,0.7819,0.7819,0.7819,0.7819,0.0257,0.5323,0.0903,6.7055,28.8419,35.6377
+response,SP,rem_9,RF,weighted,3,"system_mode, pump, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, gain",0.7689,0.7826,0.7697,0.7826,0.7675,0.0295,0.5125,0.0903,6.7055,27.5494,34.3452
+response,SP,rem_10,RF,micro,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, gain",0.7364,0.7325,0.7325,0.7325,0.7325,0.0141,0.7406,0.0903,6.7055,38.6693,45.4651
+response,SP,rem_10,RF,weighted,2,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, gain",0.6919,0.7325,0.7059,0.7325,0.6853,0.0141,0.7406,0.0903,6.7055,38.6365,45.4323
+response,SP,rem_11,RF,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, rate, gain",0.7326,0.7283,0.7283,0.7283,0.7283,0.0117,0.7617,0.0903,6.7055,41.9597,48.7555
+response,SP,rem_11,RF,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, pressure_measurement, rate, gain",0.6828,0.7283,0.7,0.7283,0.6761,0.0117,0.7617,0.0903,6.7055,41.4609,48.2567
+response,WFI-XGB,RFE,XGB,micro,9,"rate, solenoid, crc_rate",0.9673,0.9673,0.9673,0.9673,0.9673,0.0009,0.0869,0.9488,11.2243,7.8548,20.0278
+response,WFI-XGB,RFE,XGB,weighted,9,"rate, solenoid, crc_rate",0.9668,0.9673,0.9671,0.9673,0.9668,0.0009,0.0869,0.9488,11.2243,7.9466,20.1197
+response,WFI-XGB,SPFS,XGB,micro,12,,0.9679,0.9662,0.9662,0.9662,0.9662,0.0006,0.0875,0.9488,13.1396,9.9538,24.0423
+response,WFI-XGB,SPFS,XGB,weighted,12,,0.9672,0.9662,0.966,0.9662,0.9656,0.0006,0.0875,0.9488,13.1396,10.2255,24.314
+response,WFI-XGB,None,XGB,micro,12,,0.9679,0.9662,0.9662,0.9662,0.9662,0.0006,0.0875,0.9488,1.1552,11.1806,13.2845
+response,WFI-XGB,None,XGB,weighted,12,,0.9672,0.9662,0.966,0.9662,0.9656,0.0006,0.0875,0.9488,1.1552,9.7922,11.8962
+response,WFI-XGB,rem_1,XGB,micro,11,crc_rate,0.9689,0.9658,0.9658,0.9658,0.9658,0.0008,0.0837,0.9488,1.1552,9.7344,11.8383
+response,WFI-XGB,rem_1,XGB,weighted,11,crc_rate,0.9685,0.9658,0.9656,0.9658,0.9653,0.0008,0.0837,0.9488,1.1552,9.9642,12.0681
+response,WFI-XGB,rem_2,XGB,micro,10,"rate, crc_rate",0.9691,0.9695,0.9695,0.9695,0.9695,0.0008,0.0831,0.9488,1.1552,8.7906,10.8945
+response,WFI-XGB,rem_2,XGB,weighted,10,"rate, crc_rate",0.9687,0.9695,0.9693,0.9695,0.969,0.0008,0.0831,0.9488,1.1552,8.7832,10.8872
+response,WFI-XGB,rem_3,XGB,micro,9,"rate, gain, crc_rate",0.9664,0.9639,0.9639,0.9639,0.9639,0.0006,0.0958,0.9488,1.1552,8.4215,10.5254
+response,WFI-XGB,rem_3,XGB,weighted,9,"rate, gain, crc_rate",0.9659,0.9639,0.9636,0.9639,0.9632,0.0006,0.0958,0.9488,1.1552,8.7025,10.8065
+response,WFI-XGB,rem_4,XGB,micro,8,"rate, pump, gain, crc_rate",0.9646,0.9627,0.9627,0.9627,0.9627,0.001,0.0927,0.9488,1.1552,8.3393,10.4433
+response,WFI-XGB,rem_4,XGB,weighted,8,"rate, pump, gain, crc_rate",0.964,0.9627,0.9622,0.9627,0.962,0.001,0.0927,0.9488,1.1552,7.8513,9.9553
+response,WFI-XGB,rem_5,XGB,micro,7,"pump, solenoid, crc_rate, rate, gain",0.9637,0.961,0.961,0.961,0.961,0.0007,0.0927,0.9488,1.1552,7.9779,10.0818
+response,WFI-XGB,rem_5,XGB,weighted,7,"pump, solenoid, crc_rate, rate, gain",0.963,0.961,0.9605,0.961,0.9602,0.0007,0.0927,0.9488,1.1552,8.227,10.3309
+response,WFI-XGB,rem_6,XGB,micro,6,"pump, control_scheme, solenoid, crc_rate, rate, gain",0.9648,0.9598,0.9598,0.9598,0.9598,0.0009,0.0997,0.9488,1.1552,7.5295,9.6334
+response,WFI-XGB,rem_6,XGB,weighted,6,"pump, control_scheme, solenoid, crc_rate, rate, gain",0.9641,0.9598,0.9593,0.9598,0.959,0.0009,0.0997,0.9488,1.1552,7.4684,9.5724
+response,WFI-XGB,rem_7,XGB,micro,5,"pump, deadband, control_scheme, solenoid, crc_rate, rate, gain",0.957,0.9542,0.9542,0.9542,0.9542,0.0005,0.1118,0.9488,1.1552,7.3716,9.4755
+response,WFI-XGB,rem_7,XGB,weighted,5,"pump, deadband, control_scheme, solenoid, crc_rate, rate, gain",0.956,0.9542,0.9535,0.9542,0.9531,0.0005,0.1118,0.9488,1.1552,7.4741,9.5781
+response,WFI-XGB,rem_8,XGB,micro,4,"pump, deadband, control_scheme, solenoid, crc_rate, reset_rate, rate, gain",0.9428,0.9396,0.9396,0.9396,0.9396,0.0003,0.1208,0.9488,1.1552,6.8135,8.9175
+response,WFI-XGB,rem_8,XGB,weighted,4,"pump, deadband, control_scheme, solenoid, crc_rate, reset_rate, rate, gain",0.941,0.9396,0.9377,0.9396,0.9376,0.0003,0.1208,0.9488,1.1552,6.7616,8.8656
+response,WFI-XGB,rem_9,XGB,micro,3,"pump, deadband, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.9268,0.9259,0.9259,0.9259,0.9259,0.0009,0.1361,0.9488,1.1552,6.8003,8.9043
+response,WFI-XGB,rem_9,XGB,weighted,3,"pump, deadband, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.924,0.9259,0.9233,0.9259,0.9234,0.0009,0.1361,0.9488,1.1552,6.6107,8.7147
+response,WFI-XGB,rem_10,XGB,micro,2,"pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.8595,0.8564,0.8564,0.8564,0.8564,0.0003,0.2147,0.9488,1.1552,6.3793,8.4833
+response,WFI-XGB,rem_10,XGB,weighted,2,"pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.8492,0.8564,0.8482,0.8564,0.8463,0.0003,0.2147,0.9488,1.1552,6.3328,8.4368
+response,WFI-XGB,rem_11,XGB,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.8536,0.8487,0.8487,0.8487,0.8487,0,0.2351,0.9488,1.1552,5.9088,8.0127
+response,WFI-XGB,rem_11,XGB,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.8415,0.8487,0.8418,0.8487,0.8353,0,0.2351,0.9488,1.1552,5.9567,8.0607
+response,WFI-XGB,RFE,RF,micro,10,"solenoid, crc_rate",0.9806,0.9802,0.9802,0.9802,0.9802,0.0016,0.0383,0.9488,76.1678,53.1719,130.2886
+response,WFI-XGB,RFE,RF,weighted,10,"solenoid, crc_rate",0.9804,0.9802,0.9801,0.9802,0.9801,0.0016,0.0383,0.9488,76.1678,55.1875,132.3042
+response,WFI-XGB,SPFS,RF,micro,12,,0.9766,0.9746,0.9746,0.9746,0.9746,0.0007,0.0645,0.9488,66.6121,60.256,127.8169
+response,WFI-XGB,SPFS,RF,weighted,12,,0.9763,0.9746,0.9745,0.9746,0.9743,0.0007,0.0645,0.9488,66.6121,61.808,129.3689
+response,WFI-XGB,None,RF,micro,12,,0.9769,0.9766,0.9766,0.9766,0.9766,0.001,0.0633,0.9488,7.0762,62.8809,70.9059
+response,WFI-XGB,None,RF,weighted,12,,0.9767,0.9766,0.9766,0.9766,0.9763,0.001,0.0633,0.9488,7.0762,62.7379,70.7629
+response,WFI-XGB,rem_1,RF,micro,11,crc_rate,0.9806,0.9798,0.9798,0.9798,0.9798,0.0015,0.0396,0.9488,7.0762,61.0389,69.0639
+response,WFI-XGB,rem_1,RF,weighted,11,crc_rate,0.9804,0.9798,0.9797,0.9798,0.9797,0.0015,0.0396,0.9488,7.0762,54.7158,62.7408
+response,WFI-XGB,rem_2,RF,micro,10,"rate, crc_rate",0.9806,0.9811,0.9811,0.9811,0.9811,0.0019,0.0377,0.9488,7.0762,57.8462,65.8712
+response,WFI-XGB,rem_2,RF,weighted,10,"rate, crc_rate",0.9804,0.9811,0.981,0.9811,0.981,0.0019,0.0377,0.9488,7.0762,56.5076,64.5326
+response,WFI-XGB,rem_3,RF,micro,9,"rate, gain, crc_rate",0.9798,0.9795,0.9795,0.9795,0.9795,0.002,0.0435,0.9488,7.0762,60.4816,68.5066
+response,WFI-XGB,rem_3,RF,weighted,9,"rate, gain, crc_rate",0.9797,0.9795,0.9794,0.9795,0.9794,0.002,0.0435,0.9488,7.0762,45.3577,53.3827
+response,WFI-XGB,rem_4,RF,micro,8,"rate, pump, gain, crc_rate",0.9779,0.9771,0.9771,0.9771,0.9771,0.0014,0.0454,0.9488,7.0762,34.6663,42.6913
+response,WFI-XGB,rem_4,RF,weighted,8,"rate, pump, gain, crc_rate",0.9776,0.9771,0.977,0.9771,0.9769,0.0014,0.0454,0.9488,7.0762,48.9803,57.0053
+response,WFI-XGB,rem_5,RF,micro,7,"pump, solenoid, crc_rate, rate, gain",0.9786,0.9761,0.9761,0.9761,0.9761,0.0015,0.0486,0.9488,7.0762,39.1291,47.1542
+response,WFI-XGB,rem_5,RF,weighted,7,"pump, solenoid, crc_rate, rate, gain",0.9784,0.9761,0.9759,0.9761,0.9759,0.0015,0.0486,0.9488,7.0762,40.0312,48.0563
+response,WFI-XGB,rem_6,RF,micro,6,"pump, control_scheme, solenoid, crc_rate, rate, gain",0.978,0.9757,0.9757,0.9757,0.9757,0.0015,0.0473,0.9488,7.0762,47.9807,56.0058
+response,WFI-XGB,rem_6,RF,weighted,6,"pump, control_scheme, solenoid, crc_rate, rate, gain",0.9778,0.9757,0.9755,0.9757,0.9755,0.0015,0.0473,0.9488,7.0762,45.3499,53.3749
+response,WFI-XGB,rem_7,RF,micro,5,"pump, deadband, control_scheme, solenoid, crc_rate, rate, gain",0.9724,0.9703,0.9703,0.9703,0.9703,0.0023,0.0575,0.9488,7.0762,39.513,47.538
+response,WFI-XGB,rem_7,RF,weighted,5,"pump, deadband, control_scheme, solenoid, crc_rate, rate, gain",0.9722,0.9703,0.97,0.9703,0.97,0.0023,0.0575,0.9488,7.0762,40.589,48.614
+response,WFI-XGB,rem_8,RF,micro,4,"pump, deadband, control_scheme, solenoid, crc_rate, reset_rate, rate, gain",0.9653,0.9595,0.9595,0.9595,0.9595,0.003,0.0645,0.9488,7.0762,38.4984,46.5235
+response,WFI-XGB,rem_8,RF,weighted,4,"pump, deadband, control_scheme, solenoid, crc_rate, reset_rate, rate, gain",0.9649,0.9595,0.959,0.9595,0.9592,0.003,0.0645,0.9488,7.0762,40.9526,48.9776
+response,WFI-XGB,rem_9,RF,micro,3,"pump, deadband, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.9508,0.9465,0.9465,0.9465,0.9465,0.0048,0.0722,0.9488,7.0762,33.2753,41.3004
+response,WFI-XGB,rem_9,RF,weighted,3,"pump, deadband, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.9502,0.9465,0.9464,0.9465,0.9463,0.0048,0.0722,0.9488,7.0762,31.9576,39.9826
+response,WFI-XGB,rem_10,RF,micro,2,"pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.8851,0.8824,0.8824,0.8824,0.8824,0.0049,0.1182,0.9488,7.0762,45.7403,53.7653
+response,WFI-XGB,rem_10,RF,weighted,2,"pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.8813,0.8824,0.8901,0.8824,0.8784,0.0049,0.1182,0.9488,7.0762,38.1102,46.1352
+response,WFI-XGB,rem_11,RF,micro,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.893,0.8893,0.8893,0.8893,0.8893,0.0023,0.1003,0.9488,7.0762,42.0228,50.0479
+response,WFI-XGB,rem_11,RF,weighted,1,"system_mode, pump, deadband, setpoint, control_scheme, solenoid, crc_rate, cycle_time, reset_rate, rate, gain",0.8899,0.8893,0.8975,0.8893,0.8855,0.0023,0.1003,0.9488,7.0762,45.4627,53.4878

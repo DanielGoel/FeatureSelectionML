@@ -14,17 +14,20 @@ csv_files = {
     "response": "GaspipelineDatasets/NewGasFilteredResponseNNNoOHEMulti.csv"
 }
 
-metrics_log_file = "results/metrics/Evaluation_log_2.csv"
+metrics_log_file = "results/metrics/Evaluation_log_3.csv"
 model_dir = "results/models/"
 ranking_methods = ["WFI-RF", "SP", "WFI-XGB"]
-model_types = ["XGB", "RF"]
-average_types = ["micro", "macro", "weighted"]
+model_types = ["XGB", 'RF']
+average_types = ["micro", "weighted"]
 feature_selection_methods = ["RFE", "SPFS", "None"]
+dataset_times = []
 
 use_std_dev = use_abs_diff = use_skewness = use_kurtosis = True
 
 # ✅ **Step 2: Process Each Dataset with Feature Selection and Model Training**
-for dataset_name, csv_file in csv_files.items():  # Now use split datasets 
+for dataset_name, csv_file in csv_files.items():  # Now use split datasets
+    dataset_start_time = time.time()
+
     for ranking_method in ranking_methods:
         input_file = csv_file
         ranking_file = f'results/Rankings/Ranking_{ranking_method}_{dataset_name}.csv'
@@ -47,14 +50,14 @@ for dataset_name, csv_file in csv_files.items():  # Now use split datasets
             for feature_selection_method in feature_selection_methods:
                 # Step 2: Feature Selection (with timing)
                 start_time_selection = time.time()
-                selector = FeatureSelector(dataset_name, ranking_file, input_file)
-                final_model, selected_features = selector.perform_feature_selection(model_type, feature_selection_method)
+                selector = FeatureSelector(dataset_name, ranking_file, input_file, model_type)
+                selected_features = selector.perform_feature_selection(feature_selection_method)
                 selection_time_taken = time.time() - start_time_selection
                 
                 model_filename = f"{dataset_name}_{model_type}_{feature_selection_method}.pkl"
                 model_path = os.path.join(model_dir, model_filename)
                 
-                for average_type in ["micro", "macro", "weighted"]:
+                for average_type in average_types:
                     evaluator = ModelEvaluator(dataset_name, input_file, average_type, selected_features,
                                                model_type, feature_selection_method, model_path, ranking_method, metrics_log_file)
                     evaluation_time_taken = evaluator.train_and_evaluate(ranking_time_taken, selection_time_taken)
@@ -69,13 +72,23 @@ for dataset_name, csv_file in csv_files.items():  # Now use split datasets
                 model_filename = f"{dataset_name}_{model_type}_{feature_selection_method}.pkl"
                 model_path = os.path.join(model_dir, model_filename)
                 
-                # Manually set the selected features and save the model
-                selector.selected_features = selected_features
-                final_model = selector.train_and_save_model(selected_features, model_type, model_path)
-                
                 for average_type in average_types:
                     evaluator = ModelEvaluator(dataset_name, input_file, average_type, selected_features,
                                                model_type, feature_selection_method, model_path, ranking_method, metrics_log_file)
                     evaluator.train_and_evaluate(ranking_time_taken, selection_time_taken)
                     
-        print(f"Completed processing for {dataset_name} dataset.\n")
+    dataset_end_time = time.time()
+    dataset_elapsed_seconds = dataset_end_time - dataset_start_time
+    dataset_elapsed_hours = dataset_elapsed_seconds / 3600.0
+    dataset_times.append(dataset_elapsed_seconds)  # store the time in seconds
+
+    print(f"Total processing time for '{dataset_name}' dataset: "
+          f"{dataset_elapsed_seconds:.2f} seconds ({dataset_elapsed_hours:.2f} hours).")
+    print("-" * 80)
+
+# After the loop, compute the total time across all datasets
+total_time_for_all_seconds = sum(dataset_times)
+total_time_for_all_hours = total_time_for_all_seconds / 3600.0
+
+print(f"Total time for all datasets: {total_time_for_all_seconds:.2f} seconds "
+      f"({total_time_for_all_hours:.2f} hours).")

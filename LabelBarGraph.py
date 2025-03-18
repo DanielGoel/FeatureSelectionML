@@ -7,20 +7,19 @@ def plot_label_counts(dataset_name,
                     csv_file, save_path):
     # Load the CSV file into a pandas DataFrame
     df = pd.read_csv(csv_file)
-
-    # Map the labels to the corresponding categories
-#    label_mapping = {
-#        0: 'Normal',
-#        3: 'PID Gain', 4: 'PID Gain',
-#        5: 'PID Reset Rate', 6: 'PID Reset Rate',
-#        7: 'PID Rate',
-#        1: 'Setpoint', 2: 'Setpoint'
-#    }
+   # Map the labels to the corresponding categories
+    label_mapping = {
+        0: 'Normal',
+        3: 'PID Gain', 4: 'PID Gain',
+        5: 'PID Reset Rate', 6: 'PID Reset Rate',
+        7: 'PID Rate',
+        1: 'Setpoint', 2: 'Setpoint'
+    }
 
     # Create a new column 'category' based on the label column
-#    df['category'] = df['Label'].map(label_mapping)
-
-    df['category'] = df['Label']
+    df['category'] = df['Label'].map(label_mapping)
+    #df['category'] = df['Label']
+    
     # Count the occurrences of each category
     category_counts = df['category'].value_counts().sort_index()
 
@@ -44,7 +43,7 @@ def plot_label_counts(dataset_name,
     os.makedirs(save_path, exist_ok=True)
 
     # Save the plot to the specified directory
-    save_file = os.path.join(save_path, f'label_counts_plot_{os.path.basename(dataset_name)}.png')
+    save_file = os.path.join(save_path, f'Attack_counts_plot_{os.path.basename(dataset_name)}.png')
     plt.savefig(save_file)
     print(f"Plot saved to {save_file}")
 
@@ -52,8 +51,8 @@ def plot_label_counts(dataset_name,
     plt.close()
 
 csv_files = {
-    "function": "GaspipelineDatasets/NewGasFilteredFunctionMinMax_Remapped.csv",
-    "command": "GaspipelineDatasets/NewGasFilteredCommandMinMax_Remapped.csv",
+    "function": "GaspipelineDatasets/NewGasFilteredFunctionMinMax.csv",
+    "command": "GaspipelineDatasets/NewGasFilteredCommandMinMax.csv",
     "all": "GaspipelineDatasets/NewGasFilteredAllMinMax.csv",
     "response": "GaspipelineDatasets/NewGasFilteredResponseNNNoOHEMulti.csv"
 }
